@@ -1,0 +1,20 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+}
+html,body{
+height: 100%;
+width: 100%;
+}
+#main{
+width: 100%;
+position: relative;
+overflow: hidden;
+}
+#container-first{
+height: 100vh;
+width: 100%;
+position: relative;
+}

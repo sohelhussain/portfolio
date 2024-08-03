@@ -1,26 +1,63 @@
-*{
-margin: 0%;
-padding: 0%;
-box-sizing: border-box;
--webkit-font-smoothing: antialiased;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
-html,body{
-height: 100%;
-width: 100%;
+@font-face {
+  font-family: "libreitalic";
+  src: url(fonts/LibreBaskerville-Italic\ copy.ttf);
 }
-#loader{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
 }
-#main{
-width: 100%;
-position: relative;
-overflow: hidden;
+#cursor{
+    height: 128px;
 }
-#container-first{
-height: 100vh;
-width: 100%;
-position: relative;
-background-color: bisque;
+#loader {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  /* display: none; */
+  color: white;
+  position: relative;
+  /* cursor: url(svg/onefinger2.svg); */
+  /* background-image: url(svg/onefinger2.svg); */
+  /* background-repeat: no-repeat; */
+}
+#loader .loading-text{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#loader .loading-text h1{
+    font-size: 17vw;
+    font-family: 'libreitalic';
+}
+#loader .loading-text h1 span{
+    /* display: inline-block; */
+}
+#loader .vertical {
+  position: absolute;
+  top: 100%;
+  left: 25%;
+}
+#loader .vertical h1 {
+  font-family: "libreitalic";
+  font-size: 7.5vw;
+}
+#main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#container-first {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  /* background-color: rgb(249, 248, 236); */
 }

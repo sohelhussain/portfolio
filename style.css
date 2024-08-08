@@ -1,8 +1,14 @@
+:root {
+  --glow-rgb: 239 42 201;
+  /* --glow-rgb: 220 20 60;  */
+  /* background-color: rgb(220, 20, 60); */
+}
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  cursor: none;
 }
 @font-face {
   font-family: "libreitalic";
@@ -14,9 +20,100 @@ body {
   width: 100%;
   /* background-color: black; */
 }
-#cursor{
-    height: 128px;
+body:active #cursor {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  transform: translate(-50%, -50%);
 }
+#cursor {
+  height: 28px;
+  width: 28px;
+  /* background-color: red; */
+  background-image: url(/svg/onefinger2.svg);
+  background-size: cover;
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+}
+
+
+
+.glow-point {
+  position: absolute;
+  /* box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb)); */
+  box-shadow: 0rem 0rem .8rem 0.4rem rgb(var(--glow-rgb));
+  pointer-events: none;
+}
+
+
+.star {
+  position: absolute;
+  z-index: 2;
+  color: black;
+  font-size: 1rem;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+    opacity: 0;
+  }
+  
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+  
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+  
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
 #loader {
   width: 100%;
   height: 100vh;
@@ -28,18 +125,18 @@ body {
   /* background-image: url(svg/onefinger2.svg); */
   /* background-repeat: no-repeat; */
 }
-#loader .loading-text{
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#loader .loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-#loader .loading-text h1{
-    font-size: 17vw;
-    font-family: 'libreitalic';
+#loader .loading-text h1 {
+  font-size: 17vw;
+  font-family: "libreitalic";
 }
-#loader .loading-text h1 span{
-    /* display: inline-block; */
+#loader .loading-text h1 span {
+  /* display: inline-block; */
 }
 #loader .vertical {
   position: absolute;

@@ -30,7 +30,7 @@ function locoScroll() {
   ScrollTrigger.refresh();
 }
 
-locoScroll();
+// locoScroll();
 
 const loadingScreen = e => {
   const load = gsap.timeline({})
@@ -58,7 +58,7 @@ loadingScreen();
 
 
 const cursor = document.querySelector(`#cursor`);
-// const main = document.querySelector(`body`);
+const body = document.querySelector(`body`);
 // window.addEventListener("mousemove", (dets) => {
 //   gsap.to(cursor, {
 //     left: dets.x + "px",
@@ -84,7 +84,7 @@ const config = {
   glowDuration: 75,
   maximumGlowPointSpacing: 10,
   colors: ["249 146 253", "252 254 255"],
-  sizes: ["1.4rem", "1rem", "0.6rem"],
+  sizes: ["1.2rem", ".8rem", "0.4rem"],
   animations: ["fall-1", "fall-2", "fall-3"]
 }
 
@@ -113,7 +113,7 @@ const createStar = position => {
   const star = document.createElement("span"),
         color = selectRandom(config.colors);
   
-  star.className = "star fa-solid fa-sparkle";
+  star.className = "star fa-solid fa-star";
   
   star.style.left = px(position.x);
   star.style.top = px(position.y);
@@ -224,7 +224,7 @@ const handleOnMove = e => {
   updateLastMousePosition(mousePosition);
 }
 
-window.onmousemove = e => handleOnMove(e);
+document.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 

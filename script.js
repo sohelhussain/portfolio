@@ -30,7 +30,7 @@ function locoScroll() {
   ScrollTrigger.refresh();
 }
 
-// locoScroll();
+locoScroll();
 
 const loadingScreen = e => {
   const load = gsap.timeline({})
@@ -82,6 +82,7 @@ const config = {
   minimumTimeBetweenStars: 250,
   minimumDistanceBetweenStars: 75,
   glowDuration: 75,
+  zIndex: 50,
   maximumGlowPointSpacing: 10,
   colors: ["249 146 253", "252 254 255"],
   sizes: ["1.2rem", ".8rem", "0.4rem"],
@@ -117,8 +118,10 @@ const createStar = position => {
   
   star.style.left = px(position.x);
   star.style.top = px(position.y);
+  star.style.zIndex = config
   star.style.fontSize = selectRandom(config.sizes);
   star.style.color = `rgb(${color})`;
+  star.style.zIndex = config.zIndex;
   star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
   star.style.animationName = config.animations[count++ % 3];
   star.style.starAnimationDuration = ms(config.starAnimationDuration);
@@ -136,6 +139,7 @@ const createGlowPoint = position => {
   
   glow.style.left = px(position.x);
   glow.style.top = px(position.y);
+  glow.style.zIndex = config.zIndex;
   glow.style.transform = `translate(50%, 50%)`;
   
   appendElement(glow)
@@ -148,25 +152,9 @@ const determinePointQuantity = distance => Math.max(
   1
 );
 
-/* --  
 
-The following is an explanation for the "createGlow" function below:
+//? create a glow effect
 
-I didn't cover this in my video, but I ran into an issue where moving the mouse really quickly caused gaps in the glow effect. Kind of like this:
-
-*   *       *       *    *      *    🖱️
-
-instead of:
-
-*************************************🖱️
-
-To solve this I sort of "backfilled" some additional glow points by evenly spacing them in between the current point and the last one. I found this approach to be more visually pleasing than one glow point spanning the whole gap.
-
-The "quantity" of points is based on the config property "maximumGlowPointSpacing".
-
-My best explanation for why this is happening is due to the mousemove event only firing every so often. I also don't think this fix was totally necessary, but it annoyed me that it was happening so I took on the challenge of trying to fix it.
-
--- */
 const createGlow = (last, current) => {
   const distance = calcDistance(last, current),
         quantity = determinePointQuantity(distance);

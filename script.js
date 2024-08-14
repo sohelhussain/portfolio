@@ -1,4 +1,6 @@
-function locoScroll() {
+// ! soomthing scrolling
+
+function smootScorlling() {
   gsap.registerPlugin(ScrollTrigger);
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -30,7 +32,10 @@ function locoScroll() {
   ScrollTrigger.refresh();
 }
 
-locoScroll();
+smootScorlling();
+
+
+// ! loading animation
 
 const loadingScreen = e => {
   const load = gsap.timeline({})
@@ -57,16 +62,9 @@ load.to('#loader',{
 loadingScreen();
 
 
-const cursor = document.querySelector(`#cursor`);
-const body = document.querySelector(`body`);
-// window.addEventListener("mousemove", (dets) => {
-//   gsap.to(cursor, {
-//     left: dets.x + "px",
-//     top: dets.y + "px",
-//   });
-// });
 
-const hyp = e => {
+const mousFollower = e => {
+  const cursor = document.querySelector(`#cursor`);
   let start = new Date().getTime();
 
 const originPosition = { x: 0, y: 0 };
@@ -76,6 +74,8 @@ const last = {
   starPosition: originPosition,
   mousePosition: originPosition
 }
+
+// ! configuration of styling
 
 const config = {
   starAnimationDuration: 1500,
@@ -90,6 +90,8 @@ const config = {
 }
 
 let count = 0;
+
+// ! function of star
   
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
       selectRandom = items => items[rand(0, items.length - 1)];
@@ -110,6 +112,9 @@ const calcElapsedTime = (start, end) => end - start;
 const appendElement = element => document.body.appendChild(element),
       removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
 
+
+// ! creating star element style
+
 const createStar = position => {
   const star = document.createElement("span"),
         color = selectRandom(config.colors);
@@ -125,12 +130,14 @@ const createStar = position => {
   star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
   star.style.animationName = config.animations[count++ % 3];
   star.style.starAnimationDuration = ms(config.starAnimationDuration);
-  // star.style.animationDuration = ms(config.starAnimationDuration);
   
   appendElement(star);
 
   removeElement(star, config.starAnimationDuration);
 }
+
+
+// ! styling for glow effect
 
 const createGlowPoint = position => {
   const glow = document.createElement("div");
@@ -153,7 +160,7 @@ const determinePointQuantity = distance => Math.max(
 );
 
 
-//? create a glow effect
+//! create a glow effect
 
 const createGlow = (last, current) => {
   const distance = calcDistance(last, current),
@@ -218,30 +225,29 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 document.body.onmouseleave = () => updateLastMousePosition(originPosition);
 }
-hyp();
+mousFollower();
 
 
-// !mouseFollower clintX
 
-// const mouseFollower = e => {
-// document.addEventListener("mousemove", (event) => {
-//     const x = event.clientX;
-//     const y = event.clientY;
+let index = 0,
+    interval = 1000;
 
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
-//     const videoTop = document.getBoundingClientRect().top;
-//     const videoBottom = document.getBoundingClientRect().bottom;
-//     if (videoTop < y && videoBottom > y) {
-//         document.documentElement.style.setProperty('--scale',1);
-//     }else{
-//         document.documentElement.style.setProperty('--scale',0);
-//     }
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
 
-// document.documentElement.style.setProperty('--x-coord', x + 'px');
-// document.documentElement.style.setProperty('--y-coord', y + 'px');
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
 
-
-// });
-
-// }
-// mouseFollower();
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
+}

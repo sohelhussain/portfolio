@@ -35,6 +35,8 @@ function smootScorlling() {
 smootScorlling();
 
 
+
+
 // ! loading animation
 
 const loadingScreen = e => {
@@ -59,7 +61,7 @@ load.to('#loader',{
     top:'-100%'
 })
 }
-loadingScreen();
+// loadingScreen(); 
 
 
 
@@ -251,3 +253,124 @@ for(const star of document.getElementsByClassName("magic-star")) {
     setInterval(() => animate(star), 1000);
   }, index++ * (interval / 3))
 }
+
+
+//! LOADER
+
+function loading(){
+  document.addEventListener("DOMContentLoaded", function () {
+      // GSAP Animation for loader entrance
+      var tl = gsap.timeline();
+      tl.from(".loader", {
+        y: "-100%",
+        duration: 0.7,
+      });
+      tl.from(".logo", {
+        opacity: 0,
+        duration: 0.6,
+      });
+      tl.from(".year", {
+        opacity: 0,
+        duration: 0.6,
+        y: "100%",
+        stagger: 0.1,
+      });
+
+      // Timer logic to increment the percentage
+      let timerElement = document.querySelector(".timer");
+      let percentage = 0;
+      let interval = setInterval(function () {
+        percentage += 2; // Increase by 2 every 0.1 second to reach 100% in 5 seconds
+        if (percentage > 100) {
+          percentage = 100;
+          clearInterval(interval);
+          tl.to(".loader", {
+            top: "100%",
+            duration: 0.7,
+            ease: "power1.in",
+            onComplete: function () {
+              document.querySelector(".loader").style.display = "none";
+
+              var tl = gsap.timeline();
+              tl.to(".blink", {
+                opacity: 1,
+                duration: 0.1,
+                ease: "power1.in",
+                stagger: 0.05,
+              });
+              tl.to(".logo", {
+                opacity: 0,
+                display: "none",
+                duration: 0.1,
+                ease: "power1.in",
+                // stagger: 0.05,
+              });
+            },
+          });
+        }
+        timerElement.textContent = `${percentage}%`;
+      }, 100); // Update every 0.1 second
+    });
+
+}
+loading()
+function page1() {
+  // const mobNo = document.querySelectorAll(".mob-no");
+  // mobNo.forEach((mobNo)=>{
+// Create the info box div
+
+
+
+// mobNo.addEventListener("mouseenter", (e) => {
+//   infoBox.classList.remove("hidden");
+//   infoBox.style.left = `${e.offsetX + 10}px`; // Offset to avoid covering the cursor
+//   infoBox.style.top = `${e.offsetY + 10}px`;
+// });
+
+// mobNo.addEventListener("mousemove", (e) => {
+//   infoBox.style.left = `${e.offsetX + 10}px`;
+//   infoBox.style.top = `${e.offsetY + 10}px`;
+// });
+
+// mobNo.addEventListener("mouseleave", () => {
+//   infoBox.classList.add("hidden");
+// });
+//   })
+  
+  // const locate = document.querySelectorAll(".locate");
+
+  // Create the info box div
+  locate.forEach((locate)=>{
+    const locBox = document.createElement("div");
+    locBox.className = "hidden absolute bg-black rounded-md p-1 w-32";
+  
+    // Set the inner HTML content
+    locBox.innerHTML = `
+        <div class="h-32 rounded-md w-full overflow-hidden bg-red-600">
+          <img class="h-full w-full object-cover" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg" alt="">
+        </div>
+        <p class="text-xs text-white my-1 tracking-tighter font-extralight">53 Zambryaniska street, Lviv, Lviv, Oblast 47009</p>
+        <p class="text-sm tracking-tighter my-1 font-extralight text-zinc-400">open on map</p>
+      `;
+  
+    locate.appendChild(locBox);
+  
+    locate.addEventListener("mouseenter", (e) => {
+      locBox.classList.remove("hidden");
+      locBox.style.left = `${e.offsetX - locBox.offsetWidth - 10}px`; // Place the box to the left of the cursor
+      locBox.style.top = `${e.offsetY}px`;
+    });
+  
+    locate.addEventListener("mousemove", (e) => {
+      locBox.style.left = `${e.offsetX - locBox.offsetWidth - 10}px`; // Update the left position to follow the cursor
+      locBox.style.top = `${e.offsetY - 120}px`;
+    });
+  
+    locate.addEventListener("mouseleave", () => {
+      locBox.classList.add("hidden");
+    });
+  
+  })
+  
+}
+// page1()

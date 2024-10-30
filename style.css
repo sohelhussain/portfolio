@@ -32,7 +32,7 @@ body:active #cursor {
   height: 28px;
   width: 28px;
   /* background-color: red; */
-  background-image: url(/svg/onefinger2.svg);
+  background-image: url(./svg/onefinger2.svg);
   background-size: cover;
   pointer-events: none;
   position: fixed;

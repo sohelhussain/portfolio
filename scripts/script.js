@@ -39,29 +39,7 @@ smootScorlling();
 
 // ! loading animation
 
-const loadingScreen = e => {
-  const load = gsap.timeline({})
 
-const randomTimeLoader = Math.floor(Math.random() * 6) + 5;
-console.log(randomTimeLoader);
-
-load.to('#loader .loading-text h1 span',{
-    delay: randomTimeLoader,
-    display: 'block',
-    fontSize: '10vw',
-    x: '80%',
-})
-
-load.to('.vertical',{
-    duration: randomTimeLoader,
-    top: '-1540%',
-    ease: "power1.inOut",
-})
-load.to('#loader',{
-    top:'-100%'
-})
-}
-// loadingScreen(); 
 
 
 

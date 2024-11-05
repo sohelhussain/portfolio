@@ -1,12 +1,23 @@
+:root {
+    --glow-rgb: 239 42 201;
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+    /* --glow-rgb: 220 20 60;  */
+    /* background-color: rgb(220, 20, 60); */
+  }
 *{
 margin: 0%;
 padding: 0%;
 box-sizing: border-box;
 -webkit-font-smoothing: antialiased;
+cursor: none;
 }
 html,body{
 height: 100%;
 width: 100%;
+background-color: rgb(35, 35, 31);
+color: gray;
 }
 #main{
 width: 100%;
@@ -17,7 +28,176 @@ overflow: hidden;
 height: 100vh;
 width: 100%;
 position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+}
+
+
+/*! cursor */
+
+body:active #cursor {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+    transform: translate(-50%, -50%);
+  }
+  #cursor {
+    height: 28px;
+    width: 28px;
+    /* background-color: red; */
+    background-image: url(https://res.cloudinary.com/duxfpthxb/image/upload/v1730263508/onefinger2_lfvawf.svg);
+    background-size: cover;
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+  }
+  
+  .glow-point {
+    position: absolute;
+    /* box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb)); */
+    box-shadow: 0rem 0rem 0.8rem 0.4rem rgb(var(--glow-rgb));
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    font-size: .5rem;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes fall-1 {
+    0% {
+      transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg)
+        scale(0.25);
+      opacity: 0;
+    }
+  
+    5% {
+      transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg)
+        rotateZ(0deg) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg)
+        rotateZ(90deg) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fall-2 {
+    0% {
+      transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+      opacity: 0;
+    }
+  
+    10% {
+      transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg)
+        scale(0.25);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fall-3 {
+    0% {
+      transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+      opacity: 0;
+    }
+  
+    15% {
+      transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg)
+        scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  #container-first #myname {
+    background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
+    -webkit-background-clip: text; /* Required for WebKit browsers */
+    background-clip: text;
+    color: transparent;
+    font-size: 5vw;
+}
+
+#container-first form{
+    width: 100%;
+    height: 100%;
+    padding: 5vw 8vw;
+}
+#container-first form h1{
+    font-size: 4vw;
+}
+::placeholder{
+    font-size: 1.4vw;
+}
+#container-first form input{
+    border: none;
+    /* padding: 2vw; */
+    padding: 1.2vw .4vw;
+    font-size: 2vw;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    color: aliceblue;
+}
+#container-first form textarea{
+    padding: 1.2vw .4vw;
+    font-size: 2vw;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    resize: none;
+    height: 40vh;
+    width: 80%;
+    color: gray;
+}
+#container-first form .input{
+    width: 40%;
+    /* height: 50%; */
+    /* padding: .4vw; */
+    /* background: #000; */
+    border-bottom: 1px solid gray;
+}
+.hed-text{
+    color: aliceblue;
+}
+.lineone{
+    /* display: flex; */
+    /* flex-shrink: 0; */
+    margin-top: 5vw;
+}
+.name{
+    display: flex;
+    gap: 1.3vw;
+}
+.linetwo{
+    margin-top: 3vw;
+}
+.email{
+    display: flex;
+    gap: 1.3vw;
+    margin-top: 2vw;
+    flex-shrink: 0;
+    position: relative;
+    left: 34%;
+    /* margin-left: 50%; */
+}
+button{
+    position: absolute;
+    /* top: 100%; */
+    width: 20vw;
+    height: 20vw;
+    font-size: 4vw;
+    right: 2%;
+    bottom: 10%;
 }

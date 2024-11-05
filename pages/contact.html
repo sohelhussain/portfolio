@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sohel hussain || contact</title>
-    <link rel="stylesheet" href="../style/contact.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="cursor"></div>
     <div id="main">
-        <div id="container-first">
-            <h1>working on this page</h1>
-        </div>
+      <div id="container-first">
+        <form action="">
+          <h1>Hello, I'm <span id="myname">Sohel!</span></h1>
+          <div class="lineone">
+            <div class="name">
+              <h1>My <span class="hed-text">name</span> is</h1>
+              <div class="input">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="YOUR NAME"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="linetwo">
+            <div class="email">
+              <div class="input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="YOUR EMAIL"
+                />
+              </div>
+              <h1>My <span class="hed-text">email</span> is</h1>
+            </div>
+          </div>
+          <div class="linethree">
+            <h1>I'd like to <span class="hed-text">discuss</span></h1>
+            <div class="message">
+              <textarea name="message" id="message">
+ENTER YOUR MESSAGE</textarea
+              >
+            </div>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
-</body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      (function () {
+        emailjs.init("YOUR_USER_ID"); // Replace with your actual User ID from EmailJS
+      })();
+    </script>
+    <script src="../scripts//contact.js"></script>
+  </body>
 </html>

@@ -13,7 +13,7 @@
     />
 </head>
 <body>
-    <div id="cursor">
+    <div id="cursor" class="hidden md:block">
     </div>
     
     <div id="main">
@@ -25,7 +25,7 @@
             <p class=" text-xs text-zinc-400 blend">Sun 30 Jun. 19:52:51</p>
         </div>
         <div class="mr-2 blink opacity-0 cursor-pointer locate relative mt-4 tracking-tighter text-center">
-            <h4 class="text-[.9vw] blend text-white font-extralight hover:font-bold">9694428769</h4>
+            <h4 class="text-sm md:text-[.9vw] blend text-white font-extralight hover:font-bold">9694428769</h4>
             <p class="text-xs text-zinc-400 blend">sohelhussaing@gmail.com</p>
         </div>
     </div>
@@ -35,24 +35,26 @@
     </div>
     <div
         class="flex blink opacity-0 fixed z-[99] top-[88%] left-[50%] translate-x-[-50%] items-center justify-center p-1 ">
-        <div class="flex bg-black text-white rounded-lg overflow-hidden shadow-lg">
+        <div class="flex bg-black w-96 md:w-96 justify-between md:justify-start text-white rounded-lg overflow-hidden shadow-lg">
             <div class="flex bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 items-center w-24 h-16 rounded-md p-1 ">
                 <img src="https://images.vexels.com/media/users/3/158040/isolated/preview/ceb5cf4a02d45fa49dc671e7d2014c32-handshake-stroke-icon.png"
                     alt="Brochure Image" class="rounded-md h-full w-full object-cover">
             </div>
             <div class="flex tracking-tight mx-2  flex-col justify-center p-1">
-                <p class="text-[.8vw] font-thin">would you like <br> work with me?</p>
+                <p class="text-md md:text-[.8vw] font-thin">would you like <br> work with me?</p>
             </div>
             <a href="./pages/contact.html">
               <div class="flex items-center x pr-1">
                 <button
-                class="bg-white cursor-none hover:text-white hover:font-semibold hover:bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-[.8vw] font-thin text-black px-8 py-4 rounded-md shadow-md hover:bg-gray-200 transition duration-300">
+                class="bg-white cursor-none hover:text-white hover:font-semibold hover:bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-sm md:text-[.8vw] font-thin text-black px-8 py-4 rounded-md shadow-md hover:bg-gray-200 transition duration-300">
                 contact me
               </button>
             </div>
           </a>
         </div>
     </div>
+
+    <!-- second image home -->
     <div class="main montserrat-font">
         <div  class="h-screen page1  w-full relative bg-black  text-white ">
             <div class="h-screen w-full"><img class="hotel-img scale-0 rounded-none  h-screen w-full object-cover"
@@ -69,7 +71,7 @@
         </div>
 
         <div
-            class="loader uppercase tracking-loose h-screen bg-white w-full absolute flex flex-col items-center justify-center gap-[25vw] text-black top-0 left-0">
+            class="loader uppercase tracking-loose h-screen bg-white w-full absolute flex flex-col items-center justify-center gap-96 md:gap-[25vw] text-black top-0 left-0">
             <!-- <p class="text-sm year">since 2005</p> -->
             <p class="text-sm year">let's create magic with me</p>
 

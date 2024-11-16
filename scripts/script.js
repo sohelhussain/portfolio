@@ -174,10 +174,6 @@ const adjustLastMousePosition = position => {
 const handleOnMove = e => {
   const mousePosition = { x: e.clientX, y: e.clientY }
 
-  //   gsap.to(cursor, {
-  //   left: mousePosition.x + "px",
-  //   top: mousePosition.y + "px",
-  // });
 
   cursor.style.left = mousePosition.x + "px";
   cursor.style.top = mousePosition.y + "px";
@@ -292,124 +288,51 @@ function loading(){
 
 }
 loading()
-function page1() {
-  // const mobNo = document.querySelectorAll(".mob-no");
-  // mobNo.forEach((mobNo)=>{
-// Create the info box div
 
 
+const textUpperMove = () => {
+  const hed = document.querySelectorAll(".fo-hed .hedText");
 
-// mobNo.addEventListener("mouseenter", (e) => {
-//   infoBox.classList.remove("hidden");
-//   infoBox.style.left = `${e.offsetX + 10}px`; // Offset to avoid covering the cursor
-//   infoBox.style.top = `${e.offsetY + 10}px`;
-// });
-
-// mobNo.addEventListener("mousemove", (e) => {
-//   infoBox.style.left = `${e.offsetX + 10}px`;
-//   infoBox.style.top = `${e.offsetY + 10}px`;
-// });
-
-// mobNo.addEventListener("mouseleave", () => {
-//   infoBox.classList.add("hidden");
-// });
-//   })
-  
-  // const locate = document.querySelectorAll(".locate");
-
-  // Create the info box div
-  locate.forEach((locate)=>{
-    const locBox = document.createElement("div");
-    locBox.className = "hidden absolute bg-black rounded-md p-1 w-32";
-  
-    // Set the inner HTML content
-    locBox.innerHTML = `
-        <div class="h-32 rounded-md w-full overflow-hidden bg-red-600">
-          <img class="h-full w-full object-cover" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg" alt="">
-        </div>
-        <p class="text-xs text-white my-1 tracking-tighter font-extralight">53 Zambryaniska street, Lviv, Lviv, Oblast 47009</p>
-        <p class="text-sm tracking-tighter my-1 font-extralight text-zinc-400">open on map</p>
-      `;
-  
-    locate.appendChild(locBox);
-  
-    locate.addEventListener("mouseenter", (e) => {
-      locBox.classList.remove("hidden");
-      locBox.style.left = `${e.offsetX - locBox.offsetWidth - 10}px`; // Place the box to the left of the cursor
-      locBox.style.top = `${e.offsetY}px`;
+  hed.forEach(function (elem) {
+    var elemText = elem.textContent;
+    var splited = elemText.split("");
+    var clutter = "";
+    splited.forEach(function (e) {
+      clutter += `<span>${e}</span>`;
     });
-  
-    locate.addEventListener("mousemove", (e) => {
-      locBox.style.left = `${e.offsetX - locBox.offsetWidth - 10}px`; // Update the left position to follow the cursor
-      locBox.style.top = `${e.offsetY - 120}px`;
-    });
-  
-    locate.addEventListener("mouseleave", () => {
-      locBox.classList.add("hidden");
-    });
-  
-  })
-  
-}
-// page1()
-
-
-
-
-// ! container first
-
-
-const firstAnimation = () => {
-  const swip = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#container-first",
-      scroller: "body",
-      markers: true,
-      start: "0% 0%",
-      end: "100% -100%",
-      pin: true,
-      scrub: 1,
-    },
+    elem.innerHTML = clutter;
   });
-  swip
-    .to(
-      `.row-div`,
-      {
-        marginTop: "-30%",
-      },
-      "sam"
-    )
-    .to(
-      `.rotate-div`,
-      {
-        transform: `rotate(-20deg) scale(.8)`,
-        delay: 0.2,
-        marginLeft: "10%",
-      },
-      "sam"
-    )
-    .to(
-      `.containt-part1 h1`,
-      {
-        opacity: 1,
-        // display: "block",
-        delay: 0.1,
-      },
-      "sam"
-    )
-    .to(
-      `.overlaye`,
-      {
-        backgroundColor: `rgba(0, 0, 0, 0.416)`,
-      },
-      "sam"
-    )
-    .to(
-      `.inner-line`,
-      {
-        width: "100%",
-      },
-      ""
-    );
+
+  const foHed = document.querySelector(".fo-hed");
+
+  foHed.addEventListener("mouseenter",function(){
+    gsap.to(".fo-hed h1 span",{
+        opacity:0,
+        stagger:0.1,
+        duration:0.5
+    })
+    gsap.to(".fo-hed h2 span",{
+        opacity:1,
+        delay:0.4,
+        duration:0.5,
+        stagger:0.1
+    })
+  })
+
+  foHed.addEventListener("mouseleave",function(){
+    gsap.to(".fo-hed h2 span",{
+        opacity:0,
+        stagger:0.05,
+        duration:0.3
+    })
+    gsap.to(".fo-hed h1 span",{
+        opacity:1,
+        delay:0.4,
+        duration:0.3,
+        stagger:0.05
+    })
+  })
+
 };
-// firstAnimation();
+textUpperMove();
+

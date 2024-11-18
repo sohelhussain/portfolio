@@ -181,7 +181,9 @@ body:active #cursor {
   justify-content: center;
   align-items: center;
 }
-
+.first-left .fo-hed{
+  position: relative;
+} 
 .first-left .fo-hed h1{
   font-size: 8vw;
   text-transform: uppercase;

@@ -183,6 +183,8 @@ body:active #cursor {
 }
 .first-left .fo-hed{
   position: relative;
+  background: green;
+  width: fit-content;
 } 
 .first-left .fo-hed h1{
   font-size: 8vw;
@@ -190,11 +192,12 @@ body:active #cursor {
 }
 
 .first-left .fo-hed h2{
-  font-size: 8vw;
+  font-size: 7.5vw;
   text-transform: uppercase;
   position: absolute;
-  left: 70px;
-  top: 370px;
+  left: 0px;
+  top: 3vw;
+  line-height: 1;
   position: absolute;
   font-family: "silk-light";
 }

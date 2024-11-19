@@ -183,7 +183,6 @@ body:active #cursor {
 }
 .first-left .fo-hed{
   position: relative;
-  background: green;
   width: fit-content;
 } 
 .first-left .fo-hed h1{

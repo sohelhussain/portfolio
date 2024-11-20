@@ -179,7 +179,23 @@ body:active #cursor {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding-left: 3vw;
+}
+.first-left h2{
+  position: relative;
+  top: 2vw;
+  font-size: 2.5vw;
+  color: #91a3b0;
+}
+.first-left h3{
+  position: relative;
+  left: 20vw;
+  font-size: 1.5vw;
+  color: #91a3b0;
+}
+.first-left h3 span{
+  font-size: 2.5vw;
 }
 .first-left .fo-hed{
   position: relative;

@@ -334,5 +334,5 @@ const textUpperMove = () => {
   })
 
 };
-textUpperMove();
+// textUpperMove();
 

@@ -268,9 +268,47 @@ body:active #cursor {
   }
 }
 
-/*! conatiner second */
+/*! container second  */
 
 #container-second{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+.second-left{
+  width: 50%;
+  height: 100%;
+  padding: 3.5vw;
+}
+.second-left h1{
+  text-transform: capitalize;
+  font-size: 13vw;
+  letter-spacing: -0.5rem;
+  font-family: "libreitalic";
+  background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
+.second-left h2{
+  text-transform: capitalize;
+  font-size: 13vw;
+  letter-spacing: -0.5rem;
+  font-family: "libreitalic";
+  line-height: 1;
+  color: rgb(161 161 170);
+}
+.second-right{
+  width: 50%;
+  height: 100%;
+}
+
+
+
+/*! conatiner project of ui */
+
+#project-container{
   width: 100%;
   /* height: 100vh; */
   position: relative;
@@ -391,4 +429,52 @@ body:active #cursor {
     animation-direction: alternate-reverse;
     filter: blur(10px);
   } 
+  .second-left{
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+    padding: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .second-left h1{
+    text-transform: capitalize;
+    font-size: 29.5vw;
+    letter-spacing: -0.5rem;
+    font-family: "libreitalic";
+    background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+  }
+  .second-left h2{
+    text-transform: capitalize;
+    font-size: 30vw;
+    letter-spacing: -0.5rem;
+    font-family: "libreitalic";
+    line-height: 1;
+    color: rgb(161 161 170);
+  }
+
+  /*! container project of ui */
+
+
+.cover{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+  /* gap: 10vw; */
+}
+
+.card-prod{
+  flex-shrink: 0;
+  width: 80%;
+  height: 30vh;
+  border-radius: 25px;
+  background-color: rgb(17, 0, 128);
+}
 }

@@ -322,6 +322,9 @@ body:active #cursor {
   flex-wrap: wrap;
   gap: 7vw;
 }
+.prod-cover{
+  width: 25%;
+}
 
 .card-prod{
   flex-shrink: 0;
@@ -489,17 +492,19 @@ body:active #cursor {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* flex-wrap: wrap; */
-  /* gap: 10vw; */
 }
-
+.prod-cover{
+  width: 90vw;
+  margin-top: 50px;
+}
+.title-prod{
+  font-size: 4vw;
+}
 .card-prod{
   flex-shrink: 0;
-  width: 80%;
+  width: 100%;
   height: 30vh;
   border-radius: 25px;
-  background-color: rgb(17, 0, 128);
 }
 
 .card-prod .hov-prod{

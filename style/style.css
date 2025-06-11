@@ -46,6 +46,7 @@ body:active #cursor {
   pointer-events: none;
   position: fixed;
   z-index: 100;
+  z-index: 101;
 }
 
 .glow-point {
@@ -216,6 +217,7 @@ body:active #cursor {
   text-align: center;
   font-size: 8vw;
   font-family: "qyore";
+  margin-top: 6vw;
 }
 
 /*! container second  */
@@ -332,115 +334,14 @@ body:active #cursor {
     display: flex;
     flex-direction: column;
   }
-  .first-left{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 3vw;
-    /* background: green; */
-  }
-  .first-left h2{
-    position: relative;
-    top: 2vw;
-    font-size: 5vw;
-    color: #91a3b0;
-  }
-  .first-left h3{
-    position: relative;
-    left: 40vw;
-    font-size: 4.5vw;
-    color: #91a3b0;
-  }
-  .first-left h3 span{
-    font-size: 6.5vw;
-  }
-  .first-left .fo-hed{
-    position: relative;
-    width: fit-content;
-    /* background: #000; */
-  } 
-
-  .first-left .fo-hed h2{
-    font-size: 18vw;
-    text-transform: uppercase;
-    /* position: absolute;
-    left: 0px;
-    top: 3vw; */
-    /* line-height: 1; */
-    /* position: absolute; */
-    font-family: "silk-light";
-  }
-  
-  .first-left .fo-hed h2 span {
-    font-family: "silk-light";
-    -webkit-text-stroke: 1px white;
-    color: transparent;
-    /* opacity: 0; */
-  }
-  
-  .first-right{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-  
-  .oval-shape1 {
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(#e5e5e5, #91a3b0);
-    border-radius: 50%;
-    animation-name: anime;
-    animation-duration: 2s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    filter: blur(10px);
-  }
-  .oval-shape {
-    width: 500px;
-    height: 500px;
-    /* background: linear-gradient(orange, orangered); */
-    background: linear-gradient(#e5e5e5, #91a3b0);
-    border-radius: 50%;
-    animation-name: anime;
-    animation-duration: 3s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    filter: blur(10px);
-  } 
-  .second-left{
-    width: 100%;
-    /* background-color: red; */
-    height: 100%;
-    padding: 3.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .second-left h1{
-    text-transform: capitalize;
-    font-size: 29.5vw;
-    letter-spacing: -0.5rem;
-    font-family: "libreitalic";
-    background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
-    -webkit-background-clip: text; 
-    background-clip: text;
-    color: transparent;
-  }
-  .second-left h2{
-    text-transform: capitalize;
-    font-size: 30vw;
-    letter-spacing: -0.5rem;
-    font-family: "libreitalic";
-    line-height: 1;
-    color: rgb(161 161 170);
-  }
+ 
+  .hed-hero{
+  width: 100%;
+  text-align: center;
+  font-size: 14vw;
+  margin-top: 10vw;
+  font-family: "qyore";
+}
 
   /*! container project of ui */
 

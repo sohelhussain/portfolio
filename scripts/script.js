@@ -336,3 +336,16 @@ const textUpperMove = () => {
 };
 // textUpperMove();
 
+//! video s
+
+function videoEffect(){
+  const video = document.getElementById('bg-video');
+video.src = 'https://res.cloudinary.com/duxfpthxb/video/upload/v1749625333/Timeline_1_from_WhatsApp_xwlv2b.mov';
+
+video.addEventListener('ended', () => {
+  video.currentTime = 0;
+  video.play();
+});
+}
+
+videoEffect();

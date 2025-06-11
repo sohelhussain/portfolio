@@ -364,6 +364,14 @@ body:active #cursor {
 }
 
 
+#container-four{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background-color: #91a3b0;
+}
+
 @media (max-width: 767px) {
   #container-first {
     height: 100vh;

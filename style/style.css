@@ -24,7 +24,7 @@
 }
 @font-face {
   font-family: "qyore";
-  src: url(/fonts/QyoreSerif-Grandure-iF6838115a3dfdc.otf);
+  src: url(https://res.cloudinary.com/duxfpthxb/raw/upload/v1749654460/QyoreSerif-Grandure-iF6838115a3dfdc_gawmag.otf);
 }
 html,
 body {
@@ -177,8 +177,7 @@ body:active #cursor {
   height: 100vh;
   width: 100%;
   position: relative;
-  /* background-color: var(--prime); */
-  background-color: aqua;
+  background-color: var(--prime);
   overflow: hidden;
   display: flex;
 }

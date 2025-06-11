@@ -249,6 +249,30 @@ function loading(){
         y: "100%",
         stagger: 0.1,
       });
+      tl.from(".video-cover-hero", {
+        opacity: 0,
+        duration: 0.6,
+        y: "100%",
+        stagger: 0.1,
+      });
+      tl.from(".svg-box", {
+        opacity: 0,
+        duration: 0.6,
+        y: "100%",
+        stagger: 0.1,
+      });
+      tl.from(".hed-hero", {
+        opacity: 0,
+        duration: 0.6,
+        y: "100%",
+        stagger: 0.1,
+      });
+      tl.from(".hero-svg-cover", {
+        opacity: 0,
+        duration: 0.6,
+        y: "100%",
+        stagger: 0.1,
+      });
 
       // Timer logic to increment the percentage
       let timerElement = document.querySelector(".timer");
@@ -336,7 +360,7 @@ const textUpperMove = () => {
 };
 // textUpperMove();
 
-//! video s
+//! video smoothning
 
 function videoEffect(){
   const video = document.getElementById('bg-video');

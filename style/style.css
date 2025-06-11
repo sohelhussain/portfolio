@@ -381,3 +381,58 @@ body:active #cursor {
   display: none;
 }
 }
+
+
+
+/*! ipad  */
+
+@media (max-width: 1280px) {
+  #container-first {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--prime);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .hed-hero{
+  width: 100%;
+  text-align: center;
+  font-size: 14vw;
+  margin-top: 16vw;
+  font-family: "qyore";
+}
+
+.hero-svg-cover{
+  width: 78vw;
+}
+
+  /*! container project of ui */
+
+
+.cover{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.prod-cover{
+  width: 90vw;
+  margin-top: 50px;
+}
+.title-prod{
+  font-size: 4vw;
+}
+.card-prod{
+  flex-shrink: 0;
+  width: 100%;
+  height: 30vh;
+  border-radius: 25px;
+}
+
+.card-prod .hov-prod{
+  display: none;
+}
+}

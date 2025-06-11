@@ -217,7 +217,11 @@ body:active #cursor {
   text-align: center;
   font-size: 8vw;
   font-family: "qyore";
-  margin-top: 6vw;
+  margin-top: 7vw;
+}
+
+.hero-svg-cover{
+  width: 38vw;
 }
 
 /*! container second  */
@@ -338,9 +342,17 @@ body:active #cursor {
   .hed-hero{
   width: 100%;
   text-align: center;
-  font-size: 14vw;
-  margin-top: 10vw;
+  font-size: 24vw;
+  margin-top: 16vw;
   font-family: "qyore";
+}
+
+#lastname{
+  display: none;
+}
+
+.hero-svg-cover{
+  width: 128vw;
 }
 
   /*! container project of ui */

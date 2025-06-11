@@ -18,6 +18,14 @@
   font-family: "libreitalic";
   src: url(fonts/LibreBaskerville-Italic\ copy.ttf);
 }
+@font-face {
+  font-family: "skyrate";
+  src: url(fonts/Skyrate\ Regular.woff2);
+}
+@font-face {
+  font-family: "qyore";
+  src: url(/fonts/QyoreSerif-Grandure-iF6838115a3dfdc.otf);
+}
 html,
 body {
   height: 100%;
@@ -38,6 +46,7 @@ body:active #cursor {
   pointer-events: none;
   position: fixed;
   z-index: 100;
+  z-index: 101;
 }
 
 .glow-point {
@@ -168,104 +177,51 @@ body:active #cursor {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: var(--prime);
+  /* background-color: var(--prime); */
+  background-color: aqua;
   overflow: hidden;
   display: flex;
 }
 
-.first-left{
-  width: 50%;
+#container-first .video-cover-hero{
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding-left: 3vw;
-}
-.first-left h2{
   position: relative;
-  top: 2vw;
-  font-size: 2.5vw;
-  color: #91a3b0;
-}
-.first-left h3{
-  position: relative;
-  left: 20vw;
-  font-size: 1.5vw;
-  color: #91a3b0;
-}
-.first-left h3 span{
-  font-size: 2.5vw;
-}
-.first-left .fo-hed{
-  position: relative;
-  width: fit-content;
-  /* background: #000; */
-} 
-.first-left .fo-hed h1{
-  font-size: 8vw;
-  text-transform: uppercase;
+  animation: fadeLoop 10s linear infinite;
 }
 
-.first-left .fo-hed h2{
-  font-size: 8vw;
-  text-transform: uppercase;
-  /* position: absolute;
-  left: 0px;
-  top: 3vw; */
-  /* line-height: 1; */
-  /* position: absolute; */
-  font-family: "silk-light";
-}
-
-.first-left .fo-hed h2 span {
-  font-family: "silk-light";
-  -webkit-text-stroke: 1px white;
-  color: transparent;
-  /* opacity: 0; */
-}
-
-.first-right{
-  width: 50%;
+#container-first .video-cover-hero video{
+  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  object-fit: cover;
+}
+#container-first .grain {
+    pointer-events: none;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg'); /* You can change this */
+    mix-blend-mode: soft-light;
+    opacity: 0.3;
 }
 
-.oval-shape1 {
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(#e5e5e5, #91a3b0);
-  border-radius: 50%;
-  animation-name: anime;
-  animation-duration: 2s;
-  position: absolute;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  filter: blur(10px);
-}
-.oval-shape {
-  width: 500px;
-  height: 500px;
-  /* background: linear-gradient(orange, orangered); */
-  background: linear-gradient(#e5e5e5, #91a3b0);
-  border-radius: 50%;
-  animation-name: anime;
-  animation-duration: 3s;
-  position: absolute;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  filter: blur(10px);
+
+@keyframes fadeLoop {
+  0%, 98% {
+    opacity: 1;
+  }
+  99%, 100% {
+    opacity: 0.99; /* slight dip to reduce flicker perception */
+  }
 }
 
-@keyframes anime {
-  from {
-    transform: translate(-5%, -5%) skew(15deg) rotate(20deg);
-  }
-  to {
-    transform: translate(5%, 5%) skew(-15deg) rotate(-20deg);
-  }
+.hed-hero{
+  width: 100%;
+  text-align: center;
+  font-size: 8vw;
+  font-family: "qyore";
+  margin-top: 7vw;
+}
+
+.hero-svg-cover{
+  width: 38vw;
 }
 
 /*! container second  */
@@ -364,6 +320,14 @@ body:active #cursor {
 }
 
 
+#container-four{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background-color: #91a3b0;
+}
+
 @media (max-width: 767px) {
   #container-first {
     height: 100vh;
@@ -374,115 +338,22 @@ body:active #cursor {
     display: flex;
     flex-direction: column;
   }
-  .first-left{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 3vw;
-    /* background: green; */
-  }
-  .first-left h2{
-    position: relative;
-    top: 2vw;
-    font-size: 5vw;
-    color: #91a3b0;
-  }
-  .first-left h3{
-    position: relative;
-    left: 40vw;
-    font-size: 4.5vw;
-    color: #91a3b0;
-  }
-  .first-left h3 span{
-    font-size: 6.5vw;
-  }
-  .first-left .fo-hed{
-    position: relative;
-    width: fit-content;
-    /* background: #000; */
-  } 
+ 
+  .hed-hero{
+  width: 100%;
+  text-align: center;
+  font-size: 24vw;
+  margin-top: 16vw;
+  font-family: "qyore";
+}
 
-  .first-left .fo-hed h2{
-    font-size: 18vw;
-    text-transform: uppercase;
-    /* position: absolute;
-    left: 0px;
-    top: 3vw; */
-    /* line-height: 1; */
-    /* position: absolute; */
-    font-family: "silk-light";
-  }
-  
-  .first-left .fo-hed h2 span {
-    font-family: "silk-light";
-    -webkit-text-stroke: 1px white;
-    color: transparent;
-    /* opacity: 0; */
-  }
-  
-  .first-right{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-  
-  .oval-shape1 {
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(#e5e5e5, #91a3b0);
-    border-radius: 50%;
-    animation-name: anime;
-    animation-duration: 2s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    filter: blur(10px);
-  }
-  .oval-shape {
-    width: 500px;
-    height: 500px;
-    /* background: linear-gradient(orange, orangered); */
-    background: linear-gradient(#e5e5e5, #91a3b0);
-    border-radius: 50%;
-    animation-name: anime;
-    animation-duration: 3s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    filter: blur(10px);
-  } 
-  .second-left{
-    width: 100%;
-    /* background-color: red; */
-    height: 100%;
-    padding: 3.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .second-left h1{
-    text-transform: capitalize;
-    font-size: 29.5vw;
-    letter-spacing: -0.5rem;
-    font-family: "libreitalic";
-    background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
-    -webkit-background-clip: text; 
-    background-clip: text;
-    color: transparent;
-  }
-  .second-left h2{
-    text-transform: capitalize;
-    font-size: 30vw;
-    letter-spacing: -0.5rem;
-    font-family: "libreitalic";
-    line-height: 1;
-    color: rgb(161 161 170);
-  }
+#lastname{
+  display: none;
+}
+
+.hero-svg-cover{
+  width: 128vw;
+}
 
   /*! container project of ui */
 

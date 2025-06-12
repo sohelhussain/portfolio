@@ -231,87 +231,149 @@ for(const star of document.getElementsByClassName("magic-star")) {
 
 //! LOADER
 
-function loading(){
+function loading() {
   document.addEventListener("DOMContentLoaded", function () {
-      // GSAP Animation for loader entrance
-      var tl = gsap.timeline();
-      tl.from(".loader", {
-        y: "-100%",
-        duration: 0.7,
-      });
-      tl.from(".logo", {
-        opacity: 0,
-        duration: 0.6,
-      });
-      tl.from(".year", {
-        opacity: 0,
-        duration: 0.6,
-        y: "100%",
-        stagger: 0.1,
-      });
-      tl.from(".video-cover-hero", {
-        opacity: 0,
-        duration: 0.6,
-        y: "100%",
-        stagger: 0.1,
-      });
-      tl.from(".svg-box", {
-        opacity: 0,
-        duration: 0.6,
-        y: "100%",
-        stagger: 0.1,
-      });
-      tl.from(".hed-hero", {
-        opacity: 0,
-        duration: 0.6,
-        y: "100%",
-        stagger: 0.1,
-      });
-      tl.from(".hero-svg-cover", {
-        opacity: 0,
-        duration: 0.6,
-        y: "100%",
-        stagger: 0.1,
-      });
+    const loader = document.querySelector(".loader");
+    const enterBtn = document.getElementById("enter-btn");
+    const audio = document.getElementById("bg-audio");
+    const timerElement = document.querySelector(".timer");
+    const loadingTimer = document.querySelector(".loading-timer");
 
-      // Timer logic to increment the percentage
-      let timerElement = document.querySelector(".timer");
-      let percentage = 0;
-      let interval = setInterval(function () {
-        percentage += 2; // Increase by 2 every 0.1 second to reach 100% in 5 seconds
-        if (percentage > 100) {
-          percentage = 100;
-          clearInterval(interval);
-          tl.to(".loader", {
-            top: "100%",
-            duration: 0.7,
-            ease: "power1.in",
-            onComplete: function () {
-              document.querySelector(".loader").style.display = "none";
+    const allPromises = [];
 
-              var tl = gsap.timeline();
-              tl.to(".blink", {
-                opacity: 1,
-                duration: 0.1,
-                ease: "power1.in",
-                stagger: 0.05,
-              });
-              tl.to(".logo", {
-                opacity: 0,
-                display: "none",
-                duration: 0.1,
-                ease: "power1.in",
-                // stagger: 0.05,
-              });
-            },
-          });
-        }
-        timerElement.textContent = `${percentage}%`;
-      }, 100); // Update every 0.1 second
+    // Gather all assets: images, videos, background images
+    document.querySelectorAll("img").forEach((img) => {
+      const p = new Promise((resolve) => {
+        if (img.complete) return resolve();
+        img.onload = img.onerror = resolve;
+      });
+      allPromises.push(p);
     });
 
+    document.querySelectorAll("video").forEach((video) => {
+      const p = new Promise((resolve) => {
+        if (video.readyState >= 3) return resolve();
+        video.onloadeddata = video.onerror = resolve;
+      });
+      allPromises.push(p);
+    });
+
+    document.querySelectorAll("*").forEach((el) => {
+      const bg = getComputedStyle(el).backgroundImage;
+      if (bg && bg !== "none") {
+        const url = bg.match(/url\(["']?([^"')]+)["']?\)/);
+        if (url) {
+          const img = new Image();
+          const p = new Promise((resolve) => {
+            img.onload = img.onerror = resolve;
+          });
+          img.src = url[1];
+          allPromises.push(p);
+        }
+      }
+    });
+
+    if (document.fonts) {
+      allPromises.push(document.fonts.ready);
+    }
+
+    // Track progress (real or fake)
+    let percent = 0;
+    let fakeLoaderRunning = true;
+    const total = allPromises.length;
+    let loaded = 0;
+
+    function updateProgress(p) {
+      timerElement.textContent = `${p}%`;
+    }
+
+    // ✅ Fake loader runs for full 5 seconds (100 / (5s / 100ms) = 2% every 100ms)
+    const fakeInterval = setInterval(() => {
+      if (!fakeLoaderRunning) return clearInterval(fakeInterval);
+      percent += 2;
+      if (percent >= 100) {
+        percent = 100;
+        updateProgress(percent);
+        clearInterval(fakeInterval);
+        showEnterButton();
+      } else {
+        updateProgress(percent);
+      }
+    }, 100); // 100ms * 50 steps = ~5 seconds
+
+    // ✅ Real loading starts after 5 seconds
+    const realLoadTimeout = setTimeout(() => {
+      Promise.all(allPromises).then(() => {
+        fakeLoaderRunning = false;
+        clearInterval(fakeInterval);
+        updateProgress(100);
+        showEnterButton();
+      });
+
+      allPromises.forEach((p) => {
+        p.then(() => {
+          loaded++;
+          const realPercent = Math.round((loaded / total) * 100);
+          updateProgress(realPercent);
+        });
+      });
+    }, 5000); // Wait 5s before switching to real loading if not done
+
+    function showEnterButton() {
+      enterBtn.classList.remove("hidden");
+      loadingTimer.classList.add("hidden");
+    }
+
+    // Animate loader in
+    const tl = gsap.timeline();
+    tl.from(".loader", { y: "-100%", duration: 0.7 });
+    tl.from(".logo", { opacity: 0, duration: 0.6 });
+    tl.from(".year", { opacity: 0, duration: 0.6, y: "100%", stagger: 0.1 });
+
+    // Handle "Enter Site" click
+    enterBtn.addEventListener("click", () => {
+      const tl2 = gsap.timeline();
+
+      tl2.to(".loader", {
+        top: "100%",
+        duration: 0.7,
+        ease: "power1.in",
+        onComplete: () => {
+          loader.style.display = "none";
+
+          if (audio) {
+            audio.muted = false;
+            audio.play().catch((e) => {
+              console.warn("Audio play failed:", e);
+            });
+          }
+
+          tl2.to(".hero-text", { opacity: 1, duration: 0.3, y: "0%", stagger: 0.1 });
+          tl2.to(".hero-svg-cover", { opacity: 1, duration: 0.6, y: "0%", stagger: 0.1 });
+
+          const tl3 = gsap.timeline();
+          tl3.to(".blink", {
+            opacity: 1,
+            duration: 0.1,
+            ease: "power1.in",
+            stagger: 0.05,
+          });
+          tl3.to(".logo", {
+            opacity: 0,
+            display: "none",
+            duration: 0.1,
+            ease: "power1.in",
+          });
+        },
+      });
+    });
+  });
 }
-loading()
+
+loading();
+
+
+
 
 
 const textUpperMove = () => {

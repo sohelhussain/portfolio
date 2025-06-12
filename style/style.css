@@ -39,7 +39,8 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: rgb(35, 35, 31);
+  /* background-color: rgb(35, 35, 31); */
+  background-color: #BCBBBD;
 }
 body:active #cursor {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
@@ -255,7 +256,7 @@ body:active #cursor {
   position: relative;
   padding-top: 50px;
   /* display: flex; */
-  /* background-color: #BCBBBD; */
+  background-color: #BCBBBD;
 }
 
 #container-second h1{
@@ -267,7 +268,10 @@ body:active #cursor {
   -webkit-background-clip: text; 
   background-clip: text;
   color: transparent;
-  /* line-height: 1; */
+  line-height: 1;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
 }
 
 
@@ -283,6 +287,9 @@ body:active #cursor {
   line-height: 1;
   color: rgb(161 161 170);
   line-height: 1;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
 }
 
 .stretch-letter {
@@ -297,6 +304,10 @@ body:active #cursor {
   line-height: 1;
   color: rgb(161 161 170);
   line-height: 1;
+  line-height: 1;
+  transform: translateY(70%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
 }
 
 

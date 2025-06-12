@@ -26,6 +26,14 @@
   font-family: "qyore";
   src: url(https://res.cloudinary.com/duxfpthxb/raw/upload/v1749654460/QyoreSerif-Grandure-iF6838115a3dfdc_gawmag.otf);
 }
+@font-face {
+  font-family: "stretch";
+  src: url(https://res.cloudinary.com/duxfpthxb/raw/upload/v1749719482/Stretch_Pro_Regular_Font_ctwuqj.otf);
+}
+@font-face {
+  font-family: "leagueMono";
+  src: url(https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf);
+}
 html,
 body {
   height: 100%;
@@ -243,36 +251,70 @@ body:active #cursor {
 
 #container-second{
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   position: relative;
-  display: flex;
+  padding-top: 50px;
+  /* display: flex; */
+  /* background-color: #BCBBBD; */
 }
-.second-left{
-  width: 50%;
-  height: 100%;
-  padding: 3.5vw;
-}
-.second-left h1{
+
+#container-second h1{
   text-transform: capitalize;
-  font-size: 13vw;
+  font-size: 22vw;
   letter-spacing: -0.5rem;
-  font-family: "libreitalic";
+  font-family: "skyrate";
   background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
   -webkit-background-clip: text; 
   background-clip: text;
   color: transparent;
+  /* line-height: 1; */
 }
-.second-left h2{
-  text-transform: capitalize;
-  font-size: 13vw;
+
+
+#container-second {
+  margin-top: 150px;
+  margin-left: 30px;
+}
+
+.second-text-fi {
+  font-size: 16vw;
   letter-spacing: -0.5rem;
-  font-family: "libreitalic";
+  font-family: "stretch", sans-serif;
   line-height: 1;
   color: rgb(161 161 170);
+  line-height: 1;
 }
-.second-right{
-  width: 50%;
-  height: 100%;
+
+.stretch-letter {
+  font-family: "stretch";
+  font-stretch: ultra-expanded;
+}
+
+.last-sec {
+  font-size: 10vw;
+  letter-spacing: -0.5rem;
+  font-family: "stretch", sans-serif;
+  line-height: 1;
+  color: rgb(161 161 170);
+  line-height: 1;
+}
+
+
+/*! box */
+.text-cover{
+  width: 93%;
+  height: 88%;
+  background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
+  border-radius: 2vw;
+  opacity: 30%;
+  padding: 2vw;
+}
+
+
+.text-cover h3{
+  font-family: "skyrate";
+  font-size: 2rem;
+  margin-bottom: 50px;
 }
 
 

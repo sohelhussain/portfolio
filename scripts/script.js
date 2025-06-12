@@ -629,3 +629,4 @@ function heroSvg(){
         // The animation will start automatically when the page loads.
 }
 heroSvg();
+

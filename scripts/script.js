@@ -238,6 +238,7 @@ function loading() {
     const audio = document.getElementById("bg-audio");
     const timerElement = document.querySelector(".timer");
     const loadingTimer = document.querySelector(".loading-timer");
+    const overlayGrain = document.querySelector(".svg-box");
 
     const allPromises = [];
 
@@ -323,6 +324,7 @@ function loading() {
       enterBtn.classList.remove("hidden");
       loadingTimer.classList.add("hidden");
     }
+    // overlayGrain.classList.remove("hidden");
 
     // Animate loader in
     const tl = gsap.timeline();

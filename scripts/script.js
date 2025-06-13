@@ -645,7 +645,7 @@ function secondContainer(){
     scrollTrigger: {
       trigger: container,
       scroller: "#main",
-      start: "-10% 95%",
+      start: "0% 90%",
       end: "90% 80%",
       scrub: true,
       // markers: true,
@@ -655,10 +655,6 @@ function secondContainer(){
   tl.to(container, {
     backgroundColor: "rgb(35, 35, 31)",
   },"c");
-  tl.to("body", {
-    backgroundColor: "rgb(35, 35, 31)",
-  },"c");
-
 tl.to(textFirst, {
   y: 0,
   opacity: 1,

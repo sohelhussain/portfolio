@@ -40,7 +40,6 @@ body {
   width: 100%;
   position: relative;
   background-color: rgb(35, 35, 31);
-  /* background-color: #BCBBBD; */
 }
 body:active #cursor {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
@@ -393,7 +392,7 @@ body:active #cursor {
   background-color: #91a3b0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 567px) {
   #container-first {
     height: 100vh;
     width: 100%;
@@ -466,7 +465,7 @@ body:active #cursor {
 
 /*! ipad  */
 
-@media (max-width: 1280px) {
+@media (max-width: 1050px) {
   #container-first {
     height: 100vh;
     width: 100%;
@@ -479,7 +478,7 @@ body:active #cursor {
  
   .hed-hero{
   width: 100%;
-    height: 15vh;
+  height: 15vh;
   text-align: center;
   font-size: 14vw;
   margin-top: 16vw;
@@ -492,13 +491,7 @@ body:active #cursor {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }
 
-.hero-svg-cover{
-    width: 78vw;
-  max-width: 78vw;
-  opacity: 0;
-    transform: translate(0%, 50%);
-   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
-}
+
 
   /*! container project of ui */
 
@@ -529,8 +522,50 @@ body:active #cursor {
 }
 
 
-@media (min-width: 768px) and (max-width: 1280px) {
-  .hero-svg-cover {
+@media (min-width: 568px) and (max-width: 1050px) {
+.hero-svg-cover{
     width: 78vw;
+  max-width: 78vw;
+  opacity: 0;
+    transform: translate(0%, 50%);
+   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+}
+
+
+
+@media (max-width: 1370px) {
+  #container-first {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--prime);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
+ 
+  .hed-hero{
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  margin-top: 16vw;
+  font-family: "qyore";
+}
+
+
+}
+
+@media (min-width: 1051px) and (max-width: 1370px) {
+
+.hed-hero .hero-text{
+  font-size: 10vw;
+}
+.hero-svg-cover{
+    width: 48vw;
+  /* max-width: 58vw; */
+  opacity: 0;
+    transform: translate(0%, 50%);
+   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
 }

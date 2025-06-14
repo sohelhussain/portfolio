@@ -225,16 +225,14 @@ body:active #cursor {
 .hed-hero{
   width: 100%;
   height: 15vh;
-
   text-align: center;
   font-size: 8vw;
   font-family: "qyore";
   margin-top: 7vw;
-  background-color: red;
+  /* background-color: red; */
   overflow: hidden;
 }
 .hed-hero .hero-text{
-  /* background-color: #91a3b0; */
   opacity: 0;
   transform: translate(0%, 60%);
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
@@ -554,22 +552,23 @@ body:active #cursor {
 @media (min-width: 568px) and (max-width: 1050px) {
     .hed-hero {
       margin-top: 0vw;
-      background-color: #91a3b0;
+      /* background-color: #91a3b0; */
       height: 18vh;
   }
-  .hed-hero .hero-text{
+  /* .hed-hero .hero-text{
   font-size: 8vw;
-}
+} */
 .hero-svg-cover{
-    width: 30vw;
+    width: 750px;
   opacity: 0;
     transform: translate(0%, 50%);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }
-#container-second{
-  height: 60vh;
+/* #container-second{
+  height: 80vh;
+  background-color: red;
   padding-top: 120px;
-}
+} */
 }
 
 
@@ -600,7 +599,7 @@ body:active #cursor {
 
   .hed-hero {
       margin-top: 8vw;
-      background-color: #2671a7;
+      /* background-color: #2671a7; */
       height: 18vh;
   }
 .hed-hero .hero-text{
@@ -612,4 +611,10 @@ body:active #cursor {
     transform: translate(0%, 50%);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }
+
+/* #container-second{
+  height: 50vh;
+  background-color: green;
+  padding-top: 120px;
+} */
 }

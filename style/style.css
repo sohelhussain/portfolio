@@ -556,7 +556,7 @@ body:active #cursor {
       height: 18vh;
   }
   /* .hed-hero .hero-text{
-  font-size: 8vw;
+  font-size: 30px;
 } */
 .hero-svg-cover{
     width: 750px;
@@ -564,11 +564,11 @@ body:active #cursor {
     transform: translate(0%, 50%);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }
-/* #container-second{
+#container-second{
   height: 80vh;
   background-color: red;
   padding-top: 120px;
-} */
+}
 }
 
 

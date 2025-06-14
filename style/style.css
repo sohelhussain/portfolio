@@ -230,7 +230,7 @@ body:active #cursor {
   font-size: 8vw;
   font-family: "qyore";
   margin-top: 7vw;
-  /* background-color: red; */
+  background-color: red;
   overflow: hidden;
 }
 .hed-hero .hero-text{
@@ -433,6 +433,35 @@ body:active #cursor {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
 }
 
+
+/* second container */
+
+#container-second{
+  height: 50vh;
+  padding-top: 120px;
+}
+
+#container-second h1{
+  font-size: 23vw;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+
+
+.second-text-fi {
+  font-size: 16vw;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
+}
+
+.last-sec {
+  font-size: 13vw;
+  transform: translateY(70%);
+}
+
+
   /*! container project of ui */
 
 
@@ -523,12 +552,23 @@ body:active #cursor {
 
 
 @media (min-width: 568px) and (max-width: 1050px) {
+    .hed-hero {
+      margin-top: 0vw;
+      background-color: #91a3b0;
+      height: 18vh;
+  }
+  .hed-hero .hero-text{
+  font-size: 8vw;
+}
 .hero-svg-cover{
-    width: 78vw;
-  max-width: 78vw;
+    width: 30vw;
   opacity: 0;
     transform: translate(0%, 50%);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+#container-second{
+  height: 60vh;
+  padding-top: 120px;
 }
 }
 
@@ -558,12 +598,16 @@ body:active #cursor {
 
 @media (min-width: 1051px) and (max-width: 1370px) {
 
+  .hed-hero {
+      margin-top: 8vw;
+      background-color: #2671a7;
+      height: 18vh;
+  }
 .hed-hero .hero-text{
   font-size: 10vw;
 }
 .hero-svg-cover{
-    width: 48vw;
-  /* max-width: 58vw; */
+    width: 38vw;
   opacity: 0;
     transform: translate(0%, 50%);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;

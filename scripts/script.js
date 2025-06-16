@@ -678,3 +678,47 @@ tl.to(textLast, {
 
 }
 secondContainer();
+
+
+function thirdContainer(){
+  const container = document.querySelector("#container-third");
+  const textFirst = document.querySelector(".third-text-fi");
+  const textSecond = document.querySelector(".gred-text-third");
+  const textLast = document.querySelector(".last-sec-third");
+  container.style.backgroundColor = "#BCBBBD";
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      scroller: "#main",
+      start: "0% 90%",
+      end: "90% 80%",
+      scrub: true,
+      markers: true,
+    }
+  });
+
+  tl.to(container, {
+    backgroundColor: "rgb(35, 35, 31)",
+  },"c");
+tl.to(textFirst, {
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  ease: "power1.out"
+}, "c");
+tl.to(textSecond, {
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  ease: "power1.out"
+});
+tl.to(textLast, {
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  ease: "power1.out"
+});
+
+}
+thirdContainer();

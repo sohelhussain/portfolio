@@ -376,11 +376,59 @@ body:active #cursor {
 
 #container-third{
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   position: relative;
-  display: flex;
+  background-color: #BCBBBD;
+  padding-top: 150px;
+  padding-left: 30px;
 }
 
+#container-third h1{
+  text-transform: capitalize;
+  font-size: 22vw;
+  letter-spacing: -0.5rem;
+  font-family: "skyrate";
+  background: linear-gradient(45deg, rgba(63, 81, 181, 1) 0%, rgba(0, 194, 224, 1) 35%, rgba(80, 200, 120, 1) 100%);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
+}
+
+
+
+.third-text-fi {
+  font-size: 14vw;
+  letter-spacing: -0.5rem;
+  font-family: "stretch", sans-serif;
+  line-height: 1;
+  color: rgb(161 161 170);
+  line-height: 1;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
+}
+
+.stretch-letter-third {
+  font-family: "stretch";
+  font-stretch: ultra-expanded;
+}
+
+.last-sec-third {
+  font-size: 10vw;
+  letter-spacing: -0.5rem;
+  font-family: "stretch", sans-serif;
+  line-height: 1;
+  color: rgb(161 161 170);
+  line-height: 1;
+  line-height: 1;
+  transform: translateY(70%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
+}
 
 #container-four{
   width: 100%;
@@ -460,6 +508,8 @@ body:active #cursor {
 }
 
 
+
+
   /*! container project of ui */
 
 
@@ -485,6 +535,36 @@ body:active #cursor {
 
 .card-prod .hov-prod{
   display: none;
+}
+
+
+
+/* container third */
+#container-third{
+  height: 50vh;
+  padding-top: 120px;
+}
+
+#container-third h1{
+  font-size: 23vw;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+}
+
+
+
+.third-text-fi {
+  font-size: 14vw;
+  letter-spacing: -5px;
+  transform: translateY(50%);
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  opacity: 0;
+}
+
+.last-sec-third {
+  font-size: 13vw;
+  letter-spacing: -5px;
+  transform: translateY(70%);
 }
 }
 

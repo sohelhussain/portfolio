@@ -694,7 +694,7 @@ function thirdContainer(){
       start: "0% 90%",
       end: "90% 80%",
       scrub: true,
-      markers: true,
+      // markers: true,
     }
   });
 

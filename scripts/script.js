@@ -428,7 +428,7 @@ const textUpperMove = () => {
 
 function videoEffect(){
   const video = document.getElementById('bg-video');
-video.src = 'https://res.cloudinary.com/duxfpthxb/video/upload/v1749625333/Timeline_1_from_WhatsApp_xwlv2b.mov';
+video.src = 'assets/videos/back.mp4';
 
 video.addEventListener('ended', () => {
   video.currentTime = 0;

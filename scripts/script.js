@@ -288,7 +288,7 @@ function loading() {
       timerElement.textContent = `${p}%`;
     }
 
-    // ✅ Fake loader runs for full 5 seconds (100 / (5s / 100ms) = 2% every 100ms)
+    //  Fake loader runs for full 5 seconds (100 / (5s / 100ms) = 2% every 100ms)
     const fakeInterval = setInterval(() => {
       if (!fakeLoaderRunning) return clearInterval(fakeInterval);
       percent += 2;
@@ -302,7 +302,7 @@ function loading() {
       }
     }, 100); // 100ms * 50 steps = ~5 seconds
 
-    // ✅ Real loading starts after 5 seconds
+    //  Real loading starts after 5 seconds
     const realLoadTimeout = setTimeout(() => {
       Promise.all(allPromises).then(() => {
         fakeLoaderRunning = false;
@@ -722,3 +722,159 @@ tl.to(textLast, {
 
 }
 thirdContainer();
+
+
+
+
+function frontendProd() {
+  document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            const bigCardOverlay = document.querySelector('.big-card-overlay');
+            const bigCard = document.querySelector('.big-card');
+            const cardClose = document.querySelector('.card-close');
+
+            // Elements within the big card to be updated
+            const bigCardTitle = document.getElementById('big-card-title');
+            const bigCardTechStack = document.getElementById('big-card-tech-stack');
+            const bigCardDescription = document.getElementById('big-card-description');
+            const bigCardLearning = document.getElementById('big-card-learning');
+            const bigCardLiveLink = document.getElementById('big-card-live-link');
+            const bigCardGithubLink = document.getElementById('big-card-github-link');
+            const bigCardVideo = document.getElementById('big-card-video');
+            const bigCardImage = document.getElementById('big-card-image');
+
+            // Data for each card
+            const cardData = [
+                {
+                    id: "1",
+                    smallCard: {
+                        title: "Cue-Wings",
+                        subtitle: "Click to know more"
+                    },
+                    bigCard: {
+                        videoSrc: "./1746194775530300 2.MP4", // Note: Relative paths might not work in some environments if files are not present.
+                        // imageSrc: "https://res.cloudinary.com/dayqxxsip/image/upload/v1639839066/App%20Images/Blog%20Images/Article%20Images/Improving%20System%20Design%20Skills/system-design-example-wide.drawio_bjeg1k_hhit1q.png",
+                        mainTitle: "Cue-Wings",
+                        techStack: "html, css, js, scrollTrigger, gsap, locomotive",
+                        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste neque. Reprehenderit quibusdam maiores porro sit impedit fuga, eaque accusantium commodi ipsum totam tempore itaque nobis assumenda dolorum harum voluptas voluptatum amet autem nam minima delectus? Doloribus inventore, repellat libero atque est ipsa laborum nemo minus cum accusamus quasi soluta.",
+                        learning: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste neque. Reprehenderit quibusdam maiores porro sit impedit fuga, eaque accusantium commodi ipsum totam tempore itaque nobis assumenda dolorum harum voluptas voluptatum amet autem nam minima delectus? Doloribus inventore, repellat libero atque est ipsa laborum nemo minus cum accusamus quasi soluta.",
+                        liveLink: "https://github.com.io/sohel-hussain",
+                        githubLink: "https://github.com/sohel-hussain/cue-wings"
+                    }
+                },
+                {
+                    id: "2",
+                    smallCard: {
+                        title: "brand-beet",
+                        subtitle: "Click to know more"
+                    },
+                    bigCard: {
+                        videoSrc: "./1746194775530300 3.MP4", // Note: Relative paths might not work in some environments if files are not present.
+                        imageSrc: "https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png",
+                        mainTitle: "brand beet",
+                        techStack: "React, scrollTrigger, gsap, locomotive, typescript",
+                        description: "sit amet consectetur adipisicing elit. Dolorem nisi a repellat voluptas, voluptates rem ut perspiciatis. Alias ea beatae nam consectetur soluta, dicta minima dolor aperiam, dolore ab iste.",
+                        learning: "Perspiciatis provident magnam dolorum explicabo vel exercitationem cupiditate iure ex quo, libero illo, sit fuga suscipit ut. Excepturi corrupti sint eos incidunt qui, aperiam, laborum, tempore nihil facere modi aliquam numquam aliquid!",
+                        liveLink: "https://github.com.io/sohel-hussain-brandbeet",
+                        githubLink: "https://github.com/sohel-hussain/brand-beet"
+                    }
+                },
+                {
+                    id: "3", // Example for a third card
+                    smallCard: {
+                        title: "Hello World 3",
+                        subtitle: "Click to know more"
+                    },
+                    bigCard: {
+                        videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4", // Using a generic placeholder video
+                        imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+3",
+                        mainTitle: "Card 3 Project",
+                        techStack: "HTML, CSS, JavaScript, Animations",
+                        description: "This is a generic description for the third card, showcasing some basic web development skills.",
+                        learning: "Learned about responsive design and basic interactivity for web components.",
+                        liveLink: "#", // Placeholder link
+                        githubLink: "#" // Placeholder link
+                    }
+                }
+            ];
+
+            // Function to open the big card and populate content
+            function openBigCard(cardId) {
+                const selectedData = cardData.find(data => data.id === cardId);
+                if (!selectedData) {
+                    console.error('No data found for card ID:', cardId);
+                    return;
+                }
+
+                // Populate big card with selectedData.bigCard
+                bigCardTitle.textContent = selectedData.bigCard.mainTitle;
+                bigCardTechStack.textContent = selectedData.bigCard.techStack;
+                bigCardDescription.textContent = selectedData.bigCard.description;
+                bigCardLearning.textContent = selectedData.bigCard.learning;
+                bigCardLiveLink.href = selectedData.bigCard.liveLink;
+                bigCardGithubLink.href = selectedData.bigCard.githubLink;
+                bigCardVideo.src = selectedData.bigCard.videoSrc;
+                bigCardImage.src = selectedData.bigCard.imageSrc;
+
+                // Set image display property based on whether an image source is provided.
+                // This ensures that if only a video or only an image is desired, the other is hidden.
+                if (selectedData.bigCard.imageSrc) {
+                    bigCardImage.style.display = 'block';
+                } else {
+                    bigCardImage.style.display = 'none';
+                }
+
+                // Similarly for video
+                if (selectedData.bigCard.videoSrc) {
+                    bigCardVideo.style.display = 'block';
+                    bigCardVideo.load(); // Reload video to ensure it plays
+                    bigCardVideo.play();
+                } else {
+                    bigCardVideo.style.display = 'none';
+                }
+
+                bigCardOverlay.classList.add('is-active');
+            }
+
+            // Function to close the big card
+            function closeBigCard() {
+                bigCardOverlay.classList.remove('is-active');
+                // Pause video when closing the big card
+                bigCardVideo.pause();
+                bigCardVideo.currentTime = 0; // Reset video to start
+            }
+
+            // Add click listener to each small card
+            cards.forEach(card => {
+                card.addEventListener('click', (event) => {
+                    // Prevent opening if the click was on the .card-open button itself
+                    if (event.target.closest('.card-open')) {
+                        return; // Let the .card-open listener handle it
+                    }
+                    const cardId = card.dataset.cardId;
+                    openBigCard(cardId);
+                });
+            });
+
+            // Add click listener to the open button (if separate action is desired)
+            document.querySelectorAll('.card-open').forEach(openButton => {
+                openButton.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent the click from bubbling up to the card
+                    const cardId = event.target.closest('.card').dataset.cardId;
+                    openBigCard(cardId);
+                });
+            });
+
+            // Add click listener to the close button
+            cardClose.addEventListener('click', closeBigCard);
+
+            // Close big card if clicking outside of it on the overlay
+            bigCardOverlay.addEventListener('click', (event) => {
+                if (event.target === bigCardOverlay) {
+                    closeBigCard();
+                }
+            });
+        });
+}
+
+frontendProd();

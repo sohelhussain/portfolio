@@ -256,222 +256,108 @@
         </div> -->
       </div>
       <div id="project-container">
+        <div class="cover">
+             <div class="container">
+        <!-- Card Template (repeated for each card) -->
+        <div class="card" data-card-id="1">
+            <div class="card-top">
+                <div>
+                    <h1>Cue-Wings</h1>
+                    <p>Click to know more</p>
+                </div>
+                <div class="card-open">
+                    <!-- SVG for right arrow icon -->
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <!-- Using a placeholder video URL. Replace with your actual video path. -->
+                <video src="./1746194775530300 2.MP4" autoplay loop muted></video>
+            </div>
+        </div>
+
+        <div class="card" data-card-id="2">
+            <div class="card-top">
+                <div>
+                    <h1>brand-beet</h1>
+                    <p>Click to know more</p>
+                </div>
+                <div class="card-open">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+
+        <div class="card" data-card-id="3">
+            <div class="card-top">
+                <div>
+                    <h1>Hello World 3</h1>
+                    <p>Click to know more</p>
+                </div>
+                <div class="card-open">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Big Card Overlay (only one needed) -->
+    <div class="big-card-overlay">
+        <div class="big-card">
+            <div class="left-side">
+                <h1 id="big-card-title"></h1>
+                <div class="line"></div>
+                <div>
+                    <h2>Tack stacks</h2>
+                    <p id="big-card-tech-stack"></p>
+                </div>
+                <div>
+                    <h2>description</h2>
+                    <p class="description" id="big-card-description"></p>
+                </div>
+                <div>
+                    <h2>learning</h2>
+                    <p class="learning" id="big-card-learning"></p>
+                </div>
+                <div class="links-big">
+                    <a href="#" target="_blank" id="big-card-live-link">
+                        <button>Live Link</button>
+                    </a>
+                    <a href="#" target="_blank" id="big-card-github-link">
+                        <button>Github</button>
+                    </a>
+                </div>
+            </div>
+            <div class="right-side">
                 <div class="cover">
-          <!-- ! refocus prod -->
-          <div class="prod-cover">
-            <a href="https://sohelhussain.github.io/cue/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-full h-full object-fit"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734250341/cuiwing_g0oqnb.mp4"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
+                    <div class="cover-video">
+                        <video id="big-card-video" autoplay loop muted></video>
+                    </div>
+                    <div class="cover-image">
+                        <img id="big-card-image" src="" alt="Cover Image">
+                    </div>
                 </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1.4vw] text-white">
-                    Cue:- is a gsap animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/cue"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://sohelhussain.github.io/cue/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ! refocus prod -->
-          <div class="prod-cover">
-            <a href="https://refokus.onrender.com/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-[120%] object-center object-cover h-full"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734250466/Screen_Recording_2024-12-13_at_11.58.45_AM_kpflof.mov"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
-                </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1vw] text-white">
-                    Refocus:- is a framer-motion animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/refokus"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://refokus.onrender.com/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ! obys agancy -->
-          <div class="prod-cover">
-            <a href="https://sohelhussain.github.io/obys-Agency/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-[120%] object-center object-cover h-full"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734259647/obys_ofejmj.mp4"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
-                </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1vw] text-white">
-                    Obys-Agency:- is a 3d water animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/obys-Agency"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://sohelhussain.github.io/obys-Agency/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ! Brand beat -->
-          <div class="prod-cover">
-            <a href="https://sohelhussain.github.io/Brandbeet/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-[120%] object-center object-cover h-full"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734262332/Screen_Recording_2024-12-15_at_4.58.52_PM_pnzktc.mov"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
-                </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1vw] text-white">
-                    Brandbeet:- is a ScrollTrigger animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/Brandbeet/"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://sohelhussain.github.io/Brandbeet/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ! sundown -->
-          <div class="prod-cover">
-            <a href="https://sohelhussain.github.io/sundown/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-[120%] object-center object-cover h-full"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734539490/sundown_xecnnb.mp4"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
-                </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1vw] text-white">
-                    Sundown:- is a ScrollTrigger animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/sundown"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://sohelhussain.github.io/sundown/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ! pony -->
-          <div class="prod-cover">
-            <a href="https://sohelhussain.github.io/pony/">
-              <div class="card-prod bg-zinc-700">
-                <div class="w-full h-[80%]">
-                  <video
-                    class="w-[120%] object-center object-cover h-full"
-                    src="https://res.cloudinary.com/duxfpthxb/video/upload/v1734540567/pony_hlorj5.mp4"
-                    autoplay
-                    loop
-                    muted
-                  ></video>
-                </div>
-                <div class="w-full h-[20%] flex justify-center items-center">
-                  <h2 class="title-prod text-[1vw] text-white">
-                    Pony:- is a locomotive-scroll animation website
-                  </h2>
-                </div>
-                <div class="hov-prod overflow-hidden">
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://github.com/sohelhussain/pony"
-                  >
-                    <h3 class="text-4xl text-zinc-100">Github:-</h3>
-                  </a>
-                  <a
-                    class="w-full flex justify-center bg-zinc-700 transition-transform duration-2000 hover:bg-zinc-800 items-center inline-block h-1/2"
-                    href="https://sohelhussain.github.io/pony/"
-                  >
-                    <h3 class="text-3xl text-zinc-100">See live:-</h3>
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+        </div>
+        <div class="card-close">
+            <!-- SVG for close (X) icon -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+        </div>
+    </div>
         </div>
       </div>
       <div id="container-third">

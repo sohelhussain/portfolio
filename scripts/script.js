@@ -288,7 +288,7 @@ function loading() {
       timerElement.textContent = `${p}%`;
     }
 
-    // ✅ Fake loader runs for full 5 seconds (100 / (5s / 100ms) = 2% every 100ms)
+    //  Fake loader runs for full 5 seconds (100 / (5s / 100ms) = 2% every 100ms)
     const fakeInterval = setInterval(() => {
       if (!fakeLoaderRunning) return clearInterval(fakeInterval);
       percent += 2;
@@ -302,7 +302,7 @@ function loading() {
       }
     }, 100); // 100ms * 50 steps = ~5 seconds
 
-    // ✅ Real loading starts after 5 seconds
+    //  Real loading starts after 5 seconds
     const realLoadTimeout = setTimeout(() => {
       Promise.all(allPromises).then(() => {
         fakeLoaderRunning = false;
@@ -722,3 +722,327 @@ tl.to(textLast, {
 
 }
 thirdContainer();
+
+
+
+
+function frontendProd() {
+  const project1CardData = [
+    {
+        id: "1",
+        smallCard: { title: "Cue", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://res.cloudinary.com/dayqxxsip/image/upload/v1639839066/App%20Images/Blog%20Images/Article%20Images/Improving%20System%20Design%20Skills/system-design-example-wide.drawio_bjeg1k_hhit1q.png",
+            mainTitle: "Cue",
+            techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis",
+            description: "Cue is a modern, animation-rich web portfolio for a modeling agency, featuring smooth scrolling, creative transitions, and interactive visual effects. Built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis.",
+            learning: "While building this website using HTML, CSS, JavaScript, ScrollTrigger, GSAP, and Lenis, I learned several new concepts and techniques. One of the key skills I picked up was image masking animation using GSAP in combination with ScrollTrigger. I also learned how to integrate the Lenis smooth scrolling library to create a seamless, fluid scrolling experience across the site. A major highlight of my learning was exploring the pin property in ScrollTrigger, which I used extensively in this project. This feature allowed me to create engaging, scroll-based animations where elements stay fixed in place while the rest of the content moves, adding depth and interactivity to the design. This project not only improved my technical skills but also deepened my understanding of advanced web animation techniques. It showed me how powerful modern animation libraries can be when building creative and interactive web experiences.",
+            liveLink: "https://sohelhussain.github.io/cue/",
+            githubLink: "https://github.com/sohelhussain/cue"
+        }
+    },
+    {
+        id: "2",
+        smallCard: { title: "Refocus", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png",
+            mainTitle: "Refocus",
+            techStack: "React, framer-motion, typescript",
+            description: "Refocus is an animation-rich website built with React, TypeScript, and Framer Motion. Inspired by the work of Refokus — a boutique agency supporting B2B startups, VC firms, and innovative large organizations with strategy, branding, web design, and development. Nominated as Agency of the Year, Refokus delivers high-end quality at speed using a combination of Webflow, AI, and proprietary frameworks.",
+            learning: "While building this project, I learned how to create mouse-based animations using Framer Motion. I also explored how to effectively integrate Framer Motion into a React project with reusable components. Compared to plain HTML, CSS, and JavaScript projects—where I would code every animation from scratch—using Framer Motion in React made complex animations much easier and more maintainable.",
+            liveLink: "https://refokus.onrender.com/",
+            githubLink: "https://github.com/sohelhussain/refokus"
+        }
+    },
+    {
+        id: "3",
+        smallCard: { title: "Obys Agency", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+3",
+            mainTitle: "Obys Agency",
+            techStack: "HTML, CSS, JavaScript, Shery.js, Three.js",
+            description: "Obys Agency is a 3D water animation website built with HTML, CSS, JavaScript, Shery.js, and Three.js. It’s inspired by a digital design agency that focuses on creative UI/UX design, branding, and interactive experiences.",
+            learning: "In this project, I learned how to create a custom loader and integrate Shery.js with Three.js to build water ripple animations on images. I also implemented a mouse follower effect inside a video container and experimented with various text animations to enhance the site’s visual appeal.",
+            liveLink: "https://sohelhussain.github.io/obys-Agency/",
+            githubLink: "https://github.com/sohelhussain/obys-Agency"
+        }
+    },
+    {
+        id: "4",
+        smallCard: { title: "Brandbeet", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+4",
+            mainTitle: "Brandbeet",
+            techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis",
+            description: "Brandbeet is a ScrollTrigger-powered animation website built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis. The Brandbeet team designs solutions that directly contribute to revenue growth and business success, specializing in Graphic Design, Motion Design, Social Media Ads, and Print Designs. Their redesigned website blends elegance with innovation to captivate both clients and team members.",
+            learning: "In this project, I learned how to create a bubble effect using div elements, implement advanced scroll-based animations, and build reverse-cut transitions to reveal images. I also explored ScrollTrigger’s powerful pin property to create interactive, section-based animations.",
+            liveLink: "https://sohelhussain.github.io/Brandbeet/",
+            githubLink: "https://github.com/sohelhussain/Brandbeet"
+        }
+    },
+    {
+        id: "5",
+        smallCard: { title: "Sundown", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+5",
+            mainTitle: "Sundown",
+            techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, Swiper.js and Locomotive Scroll",
+            description: "Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments that inspire and engage.",
+            learning: "In this project, I learned how to create a water blob effect using div elements with CSS animations, use ScrollTrigger’s pin property to hold a section in place during scrolling, and implement Swiper.js animations for interactive sliders.",
+            liveLink: "https://sohelhussain.github.io/sundown/",
+            githubLink: "https://github.com/sohelhussain/sundown"
+        }
+    },
+    {
+        id: "6",
+        smallCard: { title: "Pony", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+6",
+            mainTitle: "Pony",
+            techStack: "HTML, CSS, JavaScript,ScrollTrigger, Gsap, and Locomotive Scroll",
+            description: "Pony is a Locomotive Scroll-powered animation website built with HTML, CSS, and JavaScript. Pony is a creative agency born from the dream of telling beautiful stories about inspiring brands. Their mission is to give deeper meaning to what you do and reveal it to the world through thoughtful words, inspiring visuals, and impactful actions.",
+            learning: "In this project, I learned how to create smooth, continuous animations using Locomotive Scroll to achieve an elegant scrolling experience.",
+            liveLink: "https://sohelhussain.github.io/pony/",
+            githubLink: "https://github.com/sohelhussain/pony"
+        }
+    },
+];
+
+// --- Data for the second set of cards (e.g., in #project-container2) ---
+// Note: I've kept the content similar to what you provided earlier for project2CardData
+// You should update these with the actual details for your "Medium", "MediVault", "Notion" projects.
+const project2CardData = [
+    {
+        id: "1",
+        smallCard: { title: "Medium", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Medium+Image",
+            mainTitle: "Medium Project", // Change to "Medium" if that's the project name
+            techStack: "HTML, CSS, JS, etc.", // Update tech stack
+            description: "Description for Medium project.", // Update description
+            learning: "Learnings from Medium project.", // Update learnings
+            liveLink: "#",
+            githubLink: "#"
+        }
+    },
+    {
+        id: "2",
+        smallCard: { title: "MediVault", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=MediVault+Image",
+            mainTitle: "MediVault Project",
+            techStack: "React, Firestore, Authentication",
+            description: "Description for MediVault project.",
+            learning: "Learnings from MediVault project.",
+            liveLink: "#",
+            githubLink: "#"
+        }
+    },
+    {
+        id: "3",
+        smallCard: { title: "Notion", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Notion+Image",
+            mainTitle: "Notion Clone",
+            techStack: "Next.js, Tailwind CSS, Convex",
+            description: "Description for Notion clone project.",
+            learning: "Learnings from Notion clone project.",
+            liveLink: "#",
+            githubLink: "#"
+        }
+    },
+    {
+        id: "4",
+        smallCard: { title: "Internshala", subtitle: "Click to know more" },
+        bigCard: {
+            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Notion+Image",
+            mainTitle: "Notion Clone",
+            techStack: "React, Tailwind CSS, MongoDB, Express, Node.js, TypeScript",
+            description: "Description for internshala clone project.",
+            learning: "Learnings from internshala clone project.",
+            liveLink: "#",
+            githubLink: "#"
+        }
+    },
+];
+
+
+// --- Reusable function to initialize card sections ---
+// This function contains the logic for finding cards based on a selector
+// and managing the single global big card overlay.
+function initCardSectionLogic(cardSelector, cardDataArray) {
+    console.log(`[Card Logic] Initializing section with selector: ${cardSelector}`);
+
+    const cards = document.querySelectorAll(cardSelector);
+    if (cards.length === 0) {
+        console.warn(`[Card Logic] No cards found for selector: ${cardSelector}. Skipping initialization.`);
+        return;
+    }
+    console.log(`[Card Logic] Found ${cards.length} cards for selector: ${cardSelector}`);
+
+    // These elements refer to the SINGLE global overlay and its contents.
+    // They are selected here to ensure local scope within this function,
+    // but they are the same global HTML elements.
+    const bigCardOverlay = document.querySelector('.big-card-overlay');
+    const body = document.body; // Reference to the body element
+    const bigCardTitle = document.getElementById('big-card-title');
+    const bigCardTechStack = document.getElementById('big-card-tech-stack');
+    const bigCardDescription = document.getElementById('big-card-description');
+    const bigCardLearning = document.getElementById('big-card-learning');
+    const bigCardLiveLink = document.getElementById('big-card-live-link');
+    const bigCardGithubLink = document.getElementById('big-card-github-link');
+    const bigCardVideo = document.getElementById('big-card-video');
+    const bigCardImage = document.getElementById('big-card-image');
+
+    // Function to open the big card and populate content
+    function openBigCard(cardId) {
+        console.log(`[Card Logic] openBigCard called for ID: ${cardId} from selector: ${cardSelector}`);
+        const selectedData = cardDataArray.find(data => String(data.id) === String(cardId)); // Ensure ID comparison is robust
+        if (!selectedData) {
+            console.error('[Card Logic] Error: No data found for card ID:', cardId, 'in provided data array.');
+            return;
+        }
+
+        // Populate big card with selectedData.bigCard, using optional chaining for safety
+        if (bigCardTitle) bigCardTitle.textContent = selectedData.bigCard.mainTitle;
+        if (bigCardTechStack) bigCardTechStack.textContent = selectedData.bigCard.techStack;
+        if (bigCardDescription) bigCardDescription.textContent = selectedData.bigCard.description;
+        if (bigCardLearning) bigCardLearning.textContent = selectedData.bigCard.learning;
+        if (bigCardLiveLink) bigCardLiveLink.href = selectedData.bigCard.liveLink;
+        if (bigCardGithubLink) bigCardGithubLink.href = selectedData.bigCard.githubLink;
+
+        // Set video and image sources and control their display
+        if (bigCardVideo) {
+            if (selectedData.bigCard.videoSrc && selectedData.bigCard.videoSrc !== '#') { // Check for valid video source
+                bigCardVideo.src = selectedData.bigCard.videoSrc;
+                bigCardVideo.style.display = 'block';
+                bigCardVideo.load();
+                bigCardVideo.play().catch(e => console.error("[Card Logic] Video play failed:", e)); // Added catch for play promise
+            } else {
+                bigCardVideo.style.display = 'none';
+                bigCardVideo.pause(); // Pause if no video
+                bigCardVideo.removeAttribute('src'); // Clear src
+            }
+        }
+
+        if (bigCardImage) {
+            if (selectedData.bigCard.imageSrc && selectedData.bigCard.imageSrc !== '#') { // Check for valid image source
+                bigCardImage.src = selectedData.bigCard.imageSrc;
+                bigCardImage.style.display = 'block';
+            } else {
+                bigCardImage.style.display = 'none';
+                bigCardImage.removeAttribute('src'); // Clear src
+            }
+        }
+
+        if (bigCardOverlay) bigCardOverlay.classList.add('is-active');
+        if (body) body.classList.add('no-scroll');
+        console.log('[Card Logic] Big card overlay should be active now.');
+    }
+
+    // Add click listener to each small card in this section
+    cards.forEach(card => {
+        card.addEventListener('click', (event) => {
+            console.log(`[Card Logic] Click detected on card in section: ${cardSelector}.`);
+            // Prevent opening if the click was on the .card-open button itself
+            if (event.target.closest('.card-open')) {
+                console.log('[Card Logic] Click was on .card-open button, preventing bubbling to parent card.');
+                return; // Let the .card-open listener handle it
+            }
+            const cardId = card.dataset.cardId;
+            openBigCard(cardId);
+        });
+
+        // Add click listener to the open button specifically for cards in this section
+        const openButton = card.querySelector('.card-open');
+        if (openButton) {
+            openButton.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the click from bubbling up to the card
+                const cardId = card.dataset.cardId; // Get ID from parent card
+                console.log(`[Card Logic] Card open button clicked for ID: ${cardId} in section: ${cardSelector}`);
+                openBigCard(cardId);
+            });
+        }
+    });
+}
+
+// --- Global Initialization (Run this once after DOM is ready) ---
+// This ensures all HTML elements are loaded before scripts try to access them.
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('[Global Init] DOM Content Loaded. Starting global initialization and card sections.');
+
+    // --- Select global overlay elements once ---
+    // These need to be accessible for the close logic.
+    const bigCardOverlay = document.querySelector('.big-card-overlay');
+    const cardClose = document.querySelector('.card-close');
+    const body = document.body;
+    // Access video element globally for pausing on close
+    const bigCardVideo = document.getElementById('big-card-video');
+
+    // Attach global close listener (only once!)
+    if (cardClose) {
+        cardClose.addEventListener('click', () => {
+            console.log('[Global Init] Global close button clicked.');
+            if (bigCardOverlay) bigCardOverlay.classList.remove('is-active');
+            if (body) body.classList.remove('no-scroll');
+            if (bigCardVideo) {
+                bigCardVideo.pause();
+                bigCardVideo.currentTime = 0;
+            }
+        });
+    }
+
+    // Close big card if clicking outside of it on the overlay (only once!)
+    if (bigCardOverlay) {
+        bigCardOverlay.addEventListener('click', (event) => {
+            if (event.target === bigCardOverlay) {
+                console.log('[Global Init] Clicked directly on overlay background, closing.');
+                if (bigCardOverlay) bigCardOverlay.classList.remove('is-active');
+                if (body) body.classList.remove('no-scroll');
+                if (bigCardVideo) {
+                    bigCardVideo.pause();
+                    bigCardVideo.currentTime = 0;
+                }
+            }
+        });
+    }
+
+    // --- Call initCardSectionLogic for each distinct set of cards ---
+    // Call for your first set of cards (e.g., in #project-container)
+    // Targets cards with class 'card' AND 'card1'.
+    initCardSectionLogic('.card.card1', project1CardData);
+    // Call for your second set of cards (e.g., in #project-container2)
+    // Targets cards with class 'card' AND 'card2'.
+    initCardSectionLogic('.card.card2', project2CardData);
+
+    console.log('[Global Init] All card section initializations attempted.');
+});
+
+// --- HELPFUL DEBUGGING & TROUBLESHOOTING TIPS ---
+// If cards still aren't clickable, it's highly likely that another script
+// (like Locomotive Scroll or your loader's animation) is covering the cards
+// or intercepting events.
+// 1. Temporarily COMMENT OUT your Locomotive Scroll script in your HTML
+//    (<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>)
+//    and test if the cards are clickable. This is often the culprit.
+// 2. Ensure your loader div (`#loader`) becomes `display: none;` or `visibility: hidden;`
+//    and has a lower `z-index` (e.g., `z-index: -1;`) after it finishes loading.
+//    If your loader uses GSAP, ensure the final state of its animation hides it completely.
+// 3. Check for any `pointer-events: none;` applied to parent elements of your cards
+//    that shouldn't be there, or `pointer-events: all;` on overlaying elements that
+//    are accidentally blocking clicks.
+
+}
+
+frontendProd();
+

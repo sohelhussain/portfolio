@@ -350,9 +350,9 @@ body:active #cursor {
   width: 100%;
   display: flex;
   flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
-  justify-content: space-between; /* Center cards horizontally */
+  justify-content: center; /* Center cards horizontally */
   align-items: center;
-  /* gap: 20px; Space between cards */
+  gap: 20px; 
   padding: 20px; /* Padding around the container */
   min-height: 100vh; /* Ensure container takes full viewport height */
 }
@@ -605,6 +605,9 @@ body:active #cursor {
 
 /* Horizontal layout for big card on larger screens */
 @media (min-width: 768px) {
+  .container {
+    justify-content: space-between;
+  }
   .big-card {
     flex-direction: row; /* Horizontal layout on larger screens */
   }

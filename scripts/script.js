@@ -802,8 +802,8 @@ function frontendProd() {
         id: "6",
         smallCard: { title: "Pony", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+6",
+            videoSrc: "assets/videos/Pony-Video.mp4",
+            // imageSrc: "",
             mainTitle: "Pony",
             techStack: "HTML, CSS, JavaScript,ScrollTrigger, Gsap, and Locomotive Scroll",
             description: "Pony is a Locomotive Scroll-powered animation website built with HTML, CSS, and JavaScript. Pony is a creative agency born from the dream of telling beautiful stories about inspiring brands. Their mission is to give deeper meaning to what you do and reveal it to the world through thoughtful words, inspiring visuals, and impactful actions.",
@@ -824,12 +824,12 @@ const project2CardData = [
         bigCard: {
             videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
             imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Medium+Image",
-            mainTitle: "Medium Project", // Change to "Medium" if that's the project name
-            techStack: "HTML, CSS, JS, etc.", // Update tech stack
-            description: "Description for Medium project.", // Update description
-            learning: "Learnings from Medium project.", // Update learnings
-            liveLink: "#",
-            githubLink: "#"
+            mainTitle: "Medium Project",
+            techStack: "Turborepo, Rust, Next.js, Axum, Typescript.", 
+            description: "On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.",
+            learning: "In this project, I learned how to work with Rust by downloading and managing packages in Axum, and how to connect a Next.js frontend to a Rust backend. I also explored building APIs and combining both frontend and backend within a monolithic architecture.",
+            liveLink: "https://github.com/sohelhussain/medium-rust",
+            githubLink: "https://github.com/sohelhussain/medium-rust"
         }
     },
     {
@@ -839,25 +839,30 @@ const project2CardData = [
             videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
             imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=MediVault+Image",
             mainTitle: "MediVault Project",
-            techStack: "React, Firestore, Authentication",
-            description: "Description for MediVault project.",
-            learning: "Learnings from MediVault project.",
-            liveLink: "#",
-            githubLink: "#"
+            techStack: "tRPC, WebRTC, Node.js, Next.js, Anchor (Solana smart contracts), Turborepo, Kafka, Typescript",
+            description: `
+    <strong>Problem:</strong> Patients visit many doctors and hospitals throughout their lifetime, resulting in multiple prescription files that are difficult to manage and carry. <br><br>
+    <strong>Solution:</strong> MediVault is a decentralized medical record system where a patient’s prescriptions are securely stored on the Solana mainnet. Hospitals can instantly access them via a QR code, ensuring both accessibility and security across institutions.
+  `,
+            learning: `
+In this project, I learned how to connect tRPC in a monolithic architecture, integrate WebRTC for real-time video calling, and use Kafka for load balancing by creating a shared package. I also understood why a monolithic architecture fits this project, since we need live connections and plan to add features like real-time chatting in the future. Additionally, I learned how to handle WebSockets with WebRTC, which Next.js alone doesn’t fully support, so I separated the backend to Node.js for WebRTC and contract handling. Finally, I worked with Anchor smart contracts on Solana for secure prescription storage.
+`,
+            liveLink: "https://youtu.be/GKRr6EIOILc",
+            githubLink: "https://github.com/sohelhussain/medivault"
         }
     },
     {
         id: "3",
-        smallCard: { title: "Notion", subtitle: "Click to know more" },
+        smallCard: { title: "Notion App", subtitle: "Click to know more" },
         bigCard: {
             videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
             imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Notion+Image",
             mainTitle: "Notion Clone",
-            techStack: "Next.js, Tailwind CSS, Convex",
-            description: "Description for Notion clone project.",
-            learning: "Learnings from Notion clone project.",
-            liveLink: "#",
-            githubLink: "#"
+            techStack: "Next.js, Tailwind CSS, Convex, Zod, CLERK, emoji-picker-react, Blocknote, Typescript",
+            description: "Notion App is an workspace built with Next.js, Tailwind CSS, Convex, Zod, BlockNote, emoji-picker-react, and TypeScript. It provides a single place where teams can find answers, automate repetitive work, and manage projects efficiently — with rich text notes, and smooth user experience.",
+            learning: "In this project, I learned how to use the Convex database for managing data, integrate emoji-picker-react for enhanced text input, and implement BlockNote to build a rich text editor for writing notes. I also learned advanced routing in Next.js, which helped me structure the app more efficiently. Additionally, I realized how much easier it is to build apps using prebuilt libraries and authentication (like Clerk) compared to coding everything from scratch, which I had done in earlier projects.",
+            liveLink: "https://youtu.be/kkiDqpEWiOA",
+            githubLink: "https://github.com/sohelhussain/notion"
         }
     },
     {
@@ -870,7 +875,7 @@ const project2CardData = [
             techStack: "React, Tailwind CSS, MongoDB, Express, Node.js, TypeScript",
             description: "Description for internshala clone project.",
             learning: "Learnings from internshala clone project.",
-            liveLink: "#",
+            liveLink: "https://hireinter.onrender.com",
             githubLink: "#"
         }
     },

@@ -822,8 +822,8 @@ const project2CardData = [
         id: "1",
         smallCard: { title: "Medium", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Medium+Image",
+            videoSrc: "assets/videos/mediumRust.mp4",
+            imageSrc: "",
             mainTitle: "Medium Project",
             techStack: "Turborepo, Rust, Next.js, Axum, Typescript.", 
             description: "On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.",
@@ -856,7 +856,7 @@ In this project, I learned how to connect tRPC in a monolithic architecture, int
         smallCard: { title: "Notion App", subtitle: "Click to know more" },
         bigCard: {
             videoSrc: "assets/videos/privewNotion.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Notion+Image",
+            imageSrc: "",
             mainTitle: "Notion Clone",
             techStack: "Next.js, Tailwind CSS, Convex, Zod, CLERK, emoji-picker-react, Blocknote, Typescript",
             description: "Notion App is an workspace built with Next.js, Tailwind CSS, Convex, Zod, BlockNote, emoji-picker-react, and TypeScript. It provides a single place where teams can find answers, automate repetitive work, and manage projects efficiently — with rich text notes, and smooth user experience.",

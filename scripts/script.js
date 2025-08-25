@@ -855,7 +855,7 @@ In this project, I learned how to connect tRPC in a monolithic architecture, int
         id: "3",
         smallCard: { title: "Notion App", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoSrc: "assets/videos/privewNotion.mp4",
             imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Notion+Image",
             mainTitle: "Notion Clone",
             techStack: "Next.js, Tailwind CSS, Convex, Zod, CLERK, emoji-picker-react, Blocknote, Typescript",

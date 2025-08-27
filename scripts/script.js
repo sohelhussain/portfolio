@@ -733,7 +733,7 @@ function frontendProd() {
         smallCard: { title: "Cue", subtitle: "Click to know more" },
         bigCard: {
             videoSrc: "assets/videos/Cue.MOV",
-            imageSrc: "https://res.cloudinary.com/dayqxxsip/image/upload/v1639839066/App%20Images/Blog%20Images/Article%20Images/Improving%20System%20Design%20Skills/system-design-example-wide.drawio_bjeg1k_hhit1q.png",
+            // imageSrc: "https://res.cloudinary.com/dayqxxsip/image/upload/v1639839066/App%20Images/Blog%20Images/Article%20Images/Improving%20System%20Design%20Skills/system-design-example-wide.drawio_bjeg1k_hhit1q.png",
             mainTitle: "Cue",
             techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis",
             description: "Cue is a modern, animation-rich web portfolio for a modeling agency, featuring smooth scrolling, creative transitions, and interactive visual effects. Built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis.",
@@ -746,8 +746,8 @@ function frontendProd() {
         id: "2",
         smallCard: { title: "Refocus", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png",
+            videoSrc: "assets/videos/Work.MOV",
+            // imageSrc: "https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png",
             mainTitle: "Refocus",
             techStack: "React, framer-motion, typescript",
             description: "Refocus is an animation-rich website built with React, TypeScript, and Framer Motion. Inspired by the work of Refokus — a boutique agency supporting B2B startups, VC firms, and innovative large organizations with strategy, branding, web design, and development. Nominated as Agency of the Year, Refokus delivers high-end quality at speed using a combination of Webflow, AI, and proprietary frameworks.",
@@ -760,8 +760,8 @@ function frontendProd() {
         id: "3",
         smallCard: { title: "Obys Agency", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+3",
+            videoSrc: "assets/videos/Obys.MOV",
+            // imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+3",
             mainTitle: "Obys Agency",
             techStack: "HTML, CSS, JavaScript, Shery.js, Three.js",
             description: "Obys Agency is a 3D water animation website built with HTML, CSS, JavaScript, Shery.js, and Three.js. It’s inspired by a digital design agency that focuses on creative UI/UX design, branding, and interactive experiences.",
@@ -774,8 +774,8 @@ function frontendProd() {
         id: "4",
         smallCard: { title: "Brandbeet", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+4",
+            videoSrc: "assets/videos/Brandbeet.mov",
+            // imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+4",
             mainTitle: "Brandbeet",
             techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis",
             description: "Brandbeet is a ScrollTrigger-powered animation website built with HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis. The Brandbeet team designs solutions that directly contribute to revenue growth and business success, specializing in Graphic Design, Motion Design, Social Media Ads, and Print Designs. Their redesigned website blends elegance with innovation to captivate both clients and team members.",
@@ -788,8 +788,8 @@ function frontendProd() {
         id: "5",
         smallCard: { title: "Sundown", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-            imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+5",
+            videoSrc: "assets/videos/Sundown.MOV",
+            // imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=Image+5",
             mainTitle: "Sundown",
             techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, Swiper.js and Locomotive Scroll",
             description: "Sundown is a multi-disciplinary studio focused on creating unique, end-to-end experiences and environments that inspire and engage.",
@@ -802,7 +802,7 @@ function frontendProd() {
         id: "6",
         smallCard: { title: "Pony", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "assets/videos/Pony-Video.mp4",
+            videoSrc: "assets/videos/Pony.MOV",
             // imageSrc: "",
             mainTitle: "Pony",
             techStack: "HTML, CSS, JavaScript,ScrollTrigger, Gsap, and Locomotive Scroll",
@@ -836,7 +836,7 @@ const project2CardData = [
         id: "2",
         smallCard: { title: "MediVault", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoSrc: "assets/videos/medivalut.MOV",
             imageSrc: "https://placehold.co/600x400/87ceeb/ffffff?text=MediVault+Image",
             mainTitle: "MediVault Project",
             techStack: "tRPC, WebRTC, Node.js, Next.js, Anchor (Solana smart contracts), Turborepo, Kafka, Typescript",

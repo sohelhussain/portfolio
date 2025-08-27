@@ -732,7 +732,7 @@ function frontendProd() {
         id: "1",
         smallCard: { title: "Cue", subtitle: "Click to know more" },
         bigCard: {
-            videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+            videoSrc: "assets/videos/Cue.MOV",
             imageSrc: "https://res.cloudinary.com/dayqxxsip/image/upload/v1639839066/App%20Images/Blog%20Images/Article%20Images/Improving%20System%20Design%20Skills/system-design-example-wide.drawio_bjeg1k_hhit1q.png",
             mainTitle: "Cue",
             techStack: "HTML, CSS, JavaScript, GSAP, ScrollTrigger, and Lenis",

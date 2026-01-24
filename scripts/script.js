@@ -42,7 +42,6 @@ smootScorlling();
 
 
 
-
 const mousFollower = e => {
   const cursor = document.querySelector(`#cursor`);
   let start = new Date().getTime();

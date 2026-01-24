@@ -889,10 +889,8 @@ function initCardSectionLogic(cardSelector, cardDataArray) {
 
     const cards = document.querySelectorAll(cardSelector);
     if (cards.length === 0) {
-        console.warn(`[Card Logic] No cards found for selector: ${cardSelector}. Skipping initialization.`);
         return;
     }
-    console.log(`[Card Logic] Found ${cards.length} cards for selector: ${cardSelector}`);
 
     // These elements refer to the SINGLE global overlay and its contents.
     // They are selected here to ensure local scope within this function,
@@ -910,7 +908,6 @@ function initCardSectionLogic(cardSelector, cardDataArray) {
 
     // Function to open the big card and populate content
     function openBigCard(cardId) {
-        console.log(`[Card Logic] openBigCard called for ID: ${cardId} from selector: ${cardSelector}`);
         const selectedData = cardDataArray.find(data => String(data.id) === String(cardId)); // Ensure ID comparison is robust
         if (!selectedData) {
             console.error('[Card Logic] Error: No data found for card ID:', cardId, 'in provided data array.');
@@ -951,16 +948,13 @@ function initCardSectionLogic(cardSelector, cardDataArray) {
 
         if (bigCardOverlay) bigCardOverlay.classList.add('is-active');
         if (body) body.classList.add('no-scroll');
-        console.log('[Card Logic] Big card overlay should be active now.');
     }
 
     // Add click listener to each small card in this section
     cards.forEach(card => {
         card.addEventListener('click', (event) => {
-            console.log(`[Card Logic] Click detected on card in section: ${cardSelector}.`);
             // Prevent opening if the click was on the .card-open button itself
             if (event.target.closest('.card-open')) {
-                console.log('[Card Logic] Click was on .card-open button, preventing bubbling to parent card.');
                 return; // Let the .card-open listener handle it
             }
             const cardId = card.dataset.cardId;
@@ -973,7 +967,6 @@ function initCardSectionLogic(cardSelector, cardDataArray) {
             openButton.addEventListener('click', (event) => {
                 event.stopPropagation(); // Prevent the click from bubbling up to the card
                 const cardId = card.dataset.cardId; // Get ID from parent card
-                console.log(`[Card Logic] Card open button clicked for ID: ${cardId} in section: ${cardSelector}`);
                 openBigCard(cardId);
             });
         }
